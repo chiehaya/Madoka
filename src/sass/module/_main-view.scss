@@ -1,0 +1,100 @@
+@use "global" as *;
+
+.main-view {
+    height: 100vh;
+    background-image: url(../../assets/images/common/fv_01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    background-position: center;
+    position: relative;
+    @include mq(md){
+        justify-content: center;
+    }
+}
+
+.main-view__inner {
+    padding: 0 rem(20);
+    margin: 0 auto;
+    @include mq(md){
+        text-align: center;
+    }
+}
+
+.main-view__title {
+    max-width: rem(463);
+    margin: 0 auto;
+    @include mq(sm){
+        width: 80%;
+    }
+    @include mq(md){
+        max-width: rem(620);
+        width: 100%;
+    }
+
+}
+
+.main-view__left {
+    display: none;
+        @include mq(sm){
+            display: block;
+            position: fixed;
+            left: rem(30);
+            bottom: 17%;
+            transform: translateY(-50%);
+            width: 25px
+        }
+        @include mq(md){
+            bottom: 10%;
+        }
+}
+
+.main-view__right {
+    display: none;
+    @include mq(sm){
+        display: block;
+        display: block;
+        position: fixed;
+        right: rem(30);
+        bottom: 23%;
+        transform: translateY(-50%);
+        width: 25px
+    }
+    @include mq(md){
+        bottom: 15%;
+    }
+}
+
+.main-view__decoration {
+    position: absolute;
+    bottom: rem(-20);
+    width: 100%;
+}
+
+.main-view::before {
+    content: "";
+    background: url(../../assets/images/common/nami.png);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: rem(35);
+    bottom: 0;
+}
+
+.main-view::after {
+    content: "";
+    background: url(../../assets/images/common/scroll.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    width: rem(55);
+    height: rem(177);
+    bottom: rem(-123);
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq(md){
+        width: rem(74);
+        bottom: rem(-111);
+    }
+}

@@ -12,10 +12,11 @@ $mediaquerys: (
 @if $startFrom == sp {
   //スマホファースト
   $breakpoints: (
-    sm: 600,
-    md: 768,
+    sm: 540,
+    md: 840,
     lg: 1024,
-    xl: 1440,
+    xl: 1400,
+    fl: 700
   );
 
   //メディアクエリー
@@ -24,20 +25,25 @@ $mediaquerys: (
     md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
     lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
     xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+    fl: "screen and (min-width: #{map-get($breakpoints,'fl')}px)",
+
   );
 
 } @else {
   $breakpoints: (
-    xl: 1440,
+    xl: 1400,
     lg: 1023,
     md: 767,
     sm: 600,
+    fl: 700,
   );
   $mediaquerys: (
     sm: "screen and (max-width: #{map-get($breakpoints,'sm')}px)",
     md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
     lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
     xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+    fl: "screen and (min-width: #{map-get($breakpoints,'fl')}px)",
+
   );
 
 

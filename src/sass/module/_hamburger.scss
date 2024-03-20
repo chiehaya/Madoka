@@ -1,0 +1,30 @@
+@use "global" as *;
+$drawer-width: rem(28);
+$drawer-height: rem(2);
+$drawer-color: $black;
+
+.hamburger {
+    z-index: 9999;
+}
+
+.hamburger span{
+    position: relative;
+    display: block;
+    width: $drawer-width;
+    height: $drawer-height;
+    background-color: $drawer-color;
+    transition: ease .3s;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0;
+}
+
+.hamburger span:nth-child(2) {
+	top: 0;
+    margin: rem(7) 0;
+}
+
+.hamburger span:nth-child(3) {
+    top: 0;
+}

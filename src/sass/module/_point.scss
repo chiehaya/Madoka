@@ -1,0 +1,229 @@
+@use "global" as *;
+
+.point {
+    position: relative;
+}
+
+.point__title {
+    margin: 0 auto;
+    max-width: rem(280);
+}
+
+.point::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 85%;
+    max-width: rem(800);
+    height: 97%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    background: linear-gradient(var(--g-angle), var(--g-color-0) var(--g-position-0), var(--g-color-1) var(--g-position-1));
+    border-radius: 25px;
+    --g-color-0: rgb(138, 213, 215);
+    --g-position-0: 0%;
+    --g-color-1: #9cddbe;
+    --g-position-1: 100%;
+    --g-color-2: #9cddbe;
+    --g-position-2: 100%;
+    --g-color-3: #9cddbe;
+    --g-position-3: 100%;
+    --g-color-4: #9cddbe;
+    --g-position-4: 100%;
+    --g-color-5: #9cddbe;
+    --g-position-5: 100%;
+    --g-color-6: #9cddbe;
+    --g-position-6: 100%;
+    --g-color-7: #9cddbe;
+    --g-position-7: 100%;
+    --g-color-8: #9cddbe;
+    --g-position-8: 100%;
+    --g-color-9: #9cddbe;
+    --g-position-9: 100%;
+    --g-color-10: #9cddbe;
+    --g-position-10: 100%;
+    --g-color-11: #9cddbe;
+    --g-position-11: 100%;
+    --g-angle: 94deg;
+    @include mq(sm){
+        max-width: rem(900);
+        width: 79%;
+        height: 97%;
+    }
+    @include mq(fl){
+        height: 95%;
+    }
+    @include mq(md){
+        max-width: rem(1100);
+        width: 85%;
+        height: 93%;
+        border-radius: 32px;
+    }
+}
+
+.point__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: rem(50);
+    padding-bottom: rem(30);
+    @include mq(fl){
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: rem(15);
+        max-width: rem(600);
+        margin: rem(50) auto 0;
+    }
+    @include mq(md){
+        max-width: rem(900);
+        gap: rem(60);
+        margin: rem(80) auto 0;
+        padding-bottom: rem(60);
+    }
+}
+
+.point__list {
+    width: 100%;
+    max-width: rem(250);
+    position: relative;
+    @include mq(sm){
+        width: calc((100% - 1rem) / 2);
+    }
+}
+
+.point__list + .point__list {
+    margin-top: rem(50);
+    @include mq(fl){
+        margin-top: rem(0);
+    }
+}
+
+.poinst__list--1::after {
+    content: "";
+    background-image: url(../../assets/images/common/number1.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    width: rem(60);
+    height: rem(50);
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: contain;
+}
+
+.poinst__list--2::after {
+    content: "";
+    background-image: url(../../assets/images/common/number2.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    width: rem(60);
+    height: rem(50);
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: contain;
+}
+
+
+.poinst__list--3::after {
+    content: "";
+    background-image: url(../../assets/images/common/number3.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    width: rem(60);
+    height: rem(50);
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: contain;
+}
+
+
+.poinst__list--4::after {
+    content: "";
+    background-image: url(../../assets/images/common/number4.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    width: rem(60);
+    height: rem(50);
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: contain;
+}
+
+
+.poinst__list--5::after {
+    content: "";
+    background-image: url(../../assets/images/common/number5.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    width: rem(60);
+    height: rem(50);
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: contain;
+}
+
+
+.poinst__list--6::after {
+    content: "";
+    background-image: url(../../assets/images/common/number6.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    display: block;
+    width: rem(60);
+    height: rem(50);
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-size: contain;
+}
+
+.point__img {
+    border: 1px solid $white;
+    width: 100%;
+    aspect-ratio: 318 / 212 ;
+}
+
+.point__img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.point__title {
+    font-size: rem(20);
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    line-height: 1.4;
+    text-align: center;
+    margin-top: rem(10);
+    font-family: $third-font-family;
+    font-weight: 500;
+}
+
+.point__description {
+    font-size: rem(12);
+    font-weight: $regular;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+    display: block;
+    margin-top: rem(5);
+    font-weight: $regular;
+    font-family: $forth-font-family;
+
+}
+
+
+

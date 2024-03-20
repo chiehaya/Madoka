@@ -1,0 +1,85 @@
+@use "global" as *;
+$close-width: rem(24);
+$close-height: rem(2.5);
+$close-color: $white;
+
+.sp-nav {
+    z-index: 8888;
+}
+
+.sp-nav__close {
+    position: relative;
+    height: rem(44);
+}
+
+.sp-nav__close span{
+    position: absolute;
+    display: block;
+    width: $close-width;
+    height: $close-height;
+    background-color: $close-color;
+    transition: ease .3s;
+}
+
+.sp-nav__close span:nth-child(1) {
+    top: rem(26);
+    rotate: 45deg;
+    right: rem(14);
+}
+
+.sp-nav__close span:nth-child(2) {
+	top: rem(26);
+    rotate: -45deg;
+    right: rem(14);
+}
+
+.sp-nav__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sp-nav__link {
+    display: block;
+    font-size: rem(18);
+    border-bottom: 1px solid #000;
+    letter-spacing: 0.03em;
+    line-height: 2.48;
+    font-weight: 400;
+    text-align: center;
+    width: fit-content;
+}
+
+.sp-nav__link--top {
+    letter-spacing: 0.39em;
+}
+
+.sp-nav__guidance {
+    margin-top: rem(30);
+}
+
+.sp-nav__name {
+    font-size: rem(20);
+    font-weight: $bold;
+    line-height: 1.97;
+}
+
+.sp-nav__tel {
+    font-weight: $bold;
+    font-size: rem(20);
+}
+
+.sp-nav__text {
+    font-size: rem(14);
+    font-weight: $regular;
+    line-height: 1.7;
+}
+
+.sp-nav__text--fax {
+    margin-top: rem(5);
+}
+
+.sp-nav__shop {
+    width: rem(240);
+    margin: rem(30) auto 0;
+}

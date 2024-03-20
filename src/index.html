@@ -18,6 +18,10 @@
   <meta property="og:description" content="" />
   <!-- ファビコン -->
   <link rel="”icon”" href="" />
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Sawarabi+Gothic&family=Shippori+Mincho&family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
@@ -25,14 +29,223 @@
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
-  <header>
-
+  <header class="header js-header">
+    <div class="header__inner">
+      <h1 class="header__logo">
+        <a href="/" class="header__link">
+          <img src="./assets/images/common/logo.png" alt="惑香">
+        </a>
+      </h1>
+      <button class="header__drawer hamburger js-hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+      <div class="header__sp-nav sp-nav js-sp-nav">
+          <div class="sp-nav__close js-close">
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="sp-nav__items">
+            <li class="sp-nav__item">
+              <a href="" class="sp-nav__link sp-nav__link--top">TOP</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="" class="sp-nav__link">6つのポイント</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="" class="sp-nav__link">内海町 田島のこと</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="" class="sp-nav__link">マルコ水産のこと</a>
+            </li>
+            <li class="sp-nav__item">
+              <a href="" class="sp-nav__link">惑香のこと</a>
+            </li>
+          </ul>
+          <div class="sp-nav__guidance">
+            <p class="sp-nav__name">マルコ水産有限会社</p>
+            <p class="sp-nav__text">〒722-2631<br>広島県福山市内海町イ1428-128</p>
+            <p class="sp-nav__tel">Tel.084-986-2399</p>
+            <p class="sp-nav__text sp-nav__text--fax">Fax.084-986-2399</p>
+            <p class="sp-nav__text">営業時間 … 9：00〜17：00</p>
+          </div>
+          <div class="sp-nav__shop">
+            <a href="">
+              <!-- オンラインショップのリンク入れる -->
+              <img src="./assets/images/common/shop_logo.png" alt="ONLINE SHOP">
+            </a>
+          </div>
+      </div>
+      <div class="header__pc-nav pc-nav">
+        <ul class="pc-nav__items">
+          <li class="pc-nav__item">
+            <a href="" class="pc-nav__link">6つのポイント</a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="" class="pc-nav__link">内海町 田島のこと</a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="" class="pc-nav__link">マルコ水産のこと</a>
+          </li>
+          <li class="pc-nav__item">
+            <a href="" class="pc-nav__link">惑香のこと</a>
+          </li>
+          <li class="pc-nav__item pc-nav__item--online">
+            <a href="">
+              <!-- オンラインショップのリンク入れる -->
+              <img src="./assets/images/common/shop_logo.png" alt="ONLINE SHOP">
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
   <main>
-    <div class="inner">
-      <p class="test">変更のテスト</p>
+    <div class="main-view js-main-view">
+      <div class="main-view__inner">
+        <div class="main-view__title">
+          <img src="./assets/images/common/madoka.png" alt="惑香">
+        </div>
+        <div class="main-view__left">
+          <img src="./assets/images/common/oyster.jpg" alt="オイスター 広島ブランド">
+        </div>
+        <div class="main-view__right">
+          <img src="./assets/images/common/marukosuisan.jpg" alt="マルコ水産 タシマ">
+        </div>
+      </div>
     </div>
   </main>
+  <div class="about">
+    <div class="about__inner inner">
+      <div class="about__decoration-1">
+        <img src="./assets/images/common/about_decoration_1.png" alt="装飾">
+      </div>
+      <h2 class="about__title">
+        <img src="./assets/images/common/about_title.svg" alt="一年中楽しめる特別な牡蠣">
+      </h2>
+      <div class="about__contents">
+        <div class="about__text">
+          固く閉まった美しい殻を開くと<br>
+          むちっとつややかな白いお肌が、こんにちは。<br>
+          ぷるんと弾力のある身を噛みしめたら<br>
+          海水の自然な塩味の中に、甘みがふわっ・・・<br>
+          雑味はなく、濃厚なうま味がギュッ。
+        </div>
+        <div class="about__img">
+          <img src="./assets/images/common/about_img.jpg" alt="新鮮な牡蠣">
+        </div>
+        <div class="about__text">
+          田島の海の優しさも、厳しさも、知っている。<br>
+          穏やかな波に甘えたり、潮の満ち干で鍛えたり<br>
+          一年中休みなく、おいしくなるために<br>
+          できることは全部。<br>
+          そう、全てはあなたの最高の笑顔が見たいから。
+        </div>
+      </div>
+      <div class="about__decoration-2">
+        <img src="./assets/images/common/about_decoration_2.png" alt="装飾">
+      </div>
+    </div>
+  </div>
+  
+  <div class="point">
+    <div class="point__inner inner">
+      <div class="point__title">
+        <img src="./assets/images/common/point_title.svg" alt="6つのポイント">
+      </div>
+      <ul class="point__container">
+        <li class="point__list poinst__list--1">
+          <div class="point__img">
+            <img src="./assets/images/common/point01.jpg" alt="ポイント1">
+          </div>
+          <h3 class="point__title">
+            <span class="point__description">一粒一粒、殻を美しく、身入りを良くする</span>
+            シングルシード養殖
+          </h3>
+        </li>
+        <li class="point__list poinst__list--2">
+          <div class="point__img">
+            <img src="./assets/images/common/point02.jpg" alt="ポイント1">
+          </div>
+          <h3 class="point__title">
+            <span class="point__description">餌を食べられる海中で成長を促す</span>
+            はえ縄式養殖場
+          </h3>
+        </li>
+        <li class="point__list poinst__list--3">
+          <div class="point__img">
+            <img src="./assets/images/common/point03.jpg" alt="ポイント1">
+          </div>
+          <h3 class="point__title">
+            <span class="point__description">厳しい環境が牡蠣の生命力を高める</span>
+            杭打ち式養殖場
+          </h3>
+        </li>
+        <li class="point__list poinst__list--4">
+          <div class="point__img">
+            <img src="./assets/images/common/point04.jpg" alt="ポイント1">
+          </div>
+          <h3 class="point__title">
+            <span class="point__description">出荷前に牡蠣を清め、より清浄に</span>
+            24時間浄化槽管理
+          </h3>
+        </li>
+        <li class="point__list poinst__list--5">
+          <div class="point__img">
+            <img src="./assets/images/common/point05.jpg" alt="ポイント1">
+          </div>
+          <h3 class="point__title">
+            <span class="point__description">海を知り尽くし、おいしさを追究する</span>
+            海苔師が養殖
+          </h3>
+        </li>
+        <li class="point__list poinst__list--6">
+          <div class="point__img">
+            <img src="./assets/images/common/point06.jpg" alt="ポイント1">
+          </div>
+          <h3 class="point__title">
+            <span class="point__description">水質基準を満たす生食指定海域</span>
+            内海町 田島
+          </h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section01">
+    <div class="section01__inner inner">
+      <div class="section01__top">
+        <img src="./assets/images/common/section01_top.jpg" alt="">
+      </div>
+      <h2 class="section01__title">
+        <img src="./assets/images/common/section01_title.png" alt="内海町 田島のこと">
+      </h2>
+      <div class="section01__contents">
+        <div class="section01__message">
+          <h3 class="section01__sub-title">
+            カラフルな水車が回ると、<br>海苔の季節
+          </h3>
+          <div class="section01__img">
+            <img src="" alt="">
+          </div>
+        </div>
+        <div class="section01__text">
+          <p>
+          広島県福山市内海町は広島県東南部の沼隈半島沖500メートルに浮かぶ島。田島と横島の二つの島から成る小さな町で、瀬戸内海のほぼ真ん中に位置している。本土から内海大橋（1989〈平成元〉年開通）を渡ると田島、さらに先に架かる睦橋を渡ると横島だ。田島と横島を地図上で見ると、タイとヒラメがキスしているように見えることから、二つの島を結ぶ睦橋はラブパワースポットとしても注目を浴びているとか。
+          </p>
+          <p>
+          紀伊水道と豊後水道からの水が交わるこの場所は昔から水産業が盛んで、海苔の養殖もその一つ。本格的に海苔のシーズンが始まる 10月初旬になると、海沿いに立ち並ぶ大きな水車に、青、紫、赤とカラフルな網が巻き付けられてぐるぐる回る光景が見られる。これは海苔の「種付け」作業で、この時期から春先まで内海町の海苔漁師たちは、極寒の瀬戸内海で多忙な毎日を送ることとなるのだ。
+          </p>
+          <p>
+            日の出とともにオレンジ色に輝き始める夜明け、高々と昇った太陽に照らされてキラキラ輝く日中、海に沈みゆく夕日が1日の幕を下ろす夕暮れ、しんと静まりかえり闇に包まれる夜…移り変わる瀬戸内海の風景が、内海町の時を刻んでいる。
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
   <footer>
 
   </footer>
