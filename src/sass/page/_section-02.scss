@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.section-02 {
+    @include mq(md){
+        background-image: url(../../assets/images/common/decoration_02.png);
+        background-repeat: no-repeat;
+        background-position : right rem(-100) bottom 0;
+        display: block;
+        z-index: -1;
+        padding-bottom: rem(100);
+    }
+}
+

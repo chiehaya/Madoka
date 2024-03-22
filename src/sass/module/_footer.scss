@@ -1,0 +1,90 @@
+@use "global" as *;
+
+.footer {
+    margin-top: rem(100);
+    padding-top: rem(50);
+    padding-bottom: rem(50);
+    background-color: $accent-color;
+    text-align: center;
+    position: relative;
+    @include mq(sm){
+        padding-left: rem(80);
+        padding-right: rem(80);
+    }
+    @include mq(md){
+        margin-top: rem(200);
+    }
+}
+
+.footer::after {
+    @include mq(md){
+        background-image: url(../../assets/images/common/decoration_01.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: "";
+        display: block;
+        height: 25.5rem;
+        left: -11%;
+        position: absolute;
+        top: -24%;
+        width: 30.3125rem;
+        z-index: -1;
+    }
+}
+
+.footer__top {
+    position: absolute;
+    display: block;
+    width: rem(40);
+    height: rem(120);
+    top: rem(-50);
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq(md){
+        width: rem(60);
+        top: rem(-78);
+    }
+}
+
+
+.footer__inner {
+
+}
+
+.footer__img {
+    max-width: rem(200);
+    margin: 0 auto;
+    @include mq(sm){
+        max-width: rem(300);
+    }
+    @include mq(md){
+        max-width: rem(540);
+    }
+}
+
+.footer__contents {
+    margin-top: rem(10);
+    @include mq(md){
+        display: flex;
+        margin-top: rem(50);
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.footer__guidance {
+    @include mq(md){
+        text-align: left;
+        width: rem(470);
+    }
+}
+
+.footer__text {
+    margin: rem(20) auto 0;
+    width: 80%;
+    @include mq(md){
+        margin: 0;
+        width: rem(640);
+    }
+}
+

@@ -21,7 +21,7 @@
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Sawarabi+Gothic&family=Shippori+Mincho&family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&family=Sawarabi+Gothic&family=Shippori+Mincho&family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
@@ -48,31 +48,30 @@
           </div>
           <ul class="sp-nav__items">
             <li class="sp-nav__item">
-              <a href="" class="sp-nav__link sp-nav__link--top">TOP</a>
+              <a href="/" class="sp-nav__link sp-nav__link--top">TOP</a>
             </li>
             <li class="sp-nav__item">
-              <a href="" class="sp-nav__link">6つのポイント</a>
+              <a href="#point" class="sp-nav__link">6つのポイント</a>
             </li>
             <li class="sp-nav__item">
-              <a href="" class="sp-nav__link">内海町 田島のこと</a>
+              <a href="#section-01" class="sp-nav__link">内海町 田島のこと</a>
             </li>
             <li class="sp-nav__item">
-              <a href="" class="sp-nav__link">マルコ水産のこと</a>
+              <a href="#section-02" class="sp-nav__link">マルコ水産のこと</a>
             </li>
             <li class="sp-nav__item">
-              <a href="" class="sp-nav__link">惑香のこと</a>
+              <a href="#section-03" class="sp-nav__link">惑香のこと</a>
             </li>
           </ul>
-          <div class="sp-nav__guidance">
-            <p class="sp-nav__name">マルコ水産有限会社</p>
-            <p class="sp-nav__text">〒722-2631<br>広島県福山市内海町イ1428-128</p>
-            <p class="sp-nav__tel">Tel.084-986-2399</p>
-            <p class="sp-nav__text sp-nav__text--fax">Fax.084-986-2399</p>
-            <p class="sp-nav__text">営業時間 … 9：00〜17：00</p>
+          <div class="sp-nav__guidance guidance">
+            <p class="guidance__name">マルコ水産有限会社</p>
+            <p class="guidance__text">〒722-2631<br>広島県福山市内海町イ1428-128</p>
+            <p class="guidance__tel">Tel.084-986-2399</p>
+            <p class="guidance__text guidance__text--fax">Fax.084-986-2399</p>
+            <p class="guidance__text">営業時間 … 9：00〜17：00</p>
           </div>
           <div class="sp-nav__shop">
-            <a href="">
-              <!-- オンラインショップのリンク入れる -->
+            <a href="https://www.maruko526.jp/products/list?category_id=13">
               <img src="./assets/images/common/shop_logo.png" alt="ONLINE SHOP">
             </a>
           </div>
@@ -80,21 +79,21 @@
       <div class="header__pc-nav pc-nav">
         <ul class="pc-nav__items">
           <li class="pc-nav__item">
-            <a href="" class="pc-nav__link">6つのポイント</a>
+            <a href="#point" class="pc-nav__link">6つのポイント</a>
           </li>
           <li class="pc-nav__item">
-            <a href="" class="pc-nav__link">内海町 田島のこと</a>
+            <a href="#section-01" class="pc-nav__link">内海町 田島のこと</a>
           </li>
           <li class="pc-nav__item">
-            <a href="" class="pc-nav__link">マルコ水産のこと</a>
+            <a href="#section-02" class="pc-nav__link">マルコ水産のこと</a>
           </li>
           <li class="pc-nav__item">
-            <a href="" class="pc-nav__link">惑香のこと</a>
+            <a href="#section-03" class="pc-nav__link">惑香のこと</a>
           </li>
-          <li class="pc-nav__item pc-nav__item--online">
-            <a href="">
-              <!-- オンラインショップのリンク入れる -->
+          <li class="pc-nav__item pc-nav__item--online online-shop">
+            <a href="https://www.maruko526.jp/products/list?category_id=13">
               <img src="./assets/images/common/shop_logo.png" alt="ONLINE SHOP">
+              <img src="./assets/images/common/shop-hover.png" alt="ONLINE SHOP">
             </a>
           </li>
         </ul>
@@ -102,26 +101,40 @@
     </div>
   </header>
   <main>
-    <div class="main-view js-main-view">
-      <div class="main-view__inner">
-        <div class="main-view__title">
-          <img src="./assets/images/common/madoka.png" alt="惑香">
-        </div>
-        <div class="main-view__left">
-          <img src="./assets/images/common/oyster.jpg" alt="オイスター 広島ブランド">
-        </div>
-        <div class="main-view__right">
-          <img src="./assets/images/common/marukosuisan.jpg" alt="マルコ水産 タシマ">
-        </div>
+  <div class="main-view js-main-view">
+    <div class="main-view__inner">
+      <div class="main-view__title">
+        <img src="./assets/images/common/madoka.png" alt="惑香">
+      </div>
+      <div class="main-view__left">
+        <img src="./assets/images/common/oyster.jpg" alt="オイスター 広島ブランド">
+      </div>
+      <div class="main-view__right">
+        <img src="./assets/images/common/marukosuisan.jpg" alt="マルコ水産 タシマ">
       </div>
     </div>
-  </main>
-  <div class="about">
+  </div>
+
+  <div class="loader">
+    <div class="loader__inner">
+      <div class="loader__img loader__img--01 js-load01">
+        <img src="./assets/images/common/loader01.jpg" alt="">
+      </div>
+      <div class="loader__img loader__img--02 js-load02">
+        <img src="./assets/images/common/loader02.jpg" alt="">
+      </div>
+      <div class="loader__img loader__img--03 js-load03">
+        <img src="./assets/images/common/loader03.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <section class="about">
     <div class="about__inner inner">
-      <div class="about__decoration-1">
+      <div class="about__decoration-1 js-fade-in">
         <img src="./assets/images/common/about_decoration_1.png" alt="装飾">
       </div>
-      <h2 class="about__title">
+      <h2 class="about__title js-fade-in">
         <img src="./assets/images/common/about_title.svg" alt="一年中楽しめる特別な牡蠣">
       </h2>
       <div class="about__contents">
@@ -143,13 +156,13 @@
           そう、全てはあなたの最高の笑顔が見たいから。
         </div>
       </div>
-      <div class="about__decoration-2">
+      <div class="about__decoration-2 js-fade-in">
         <img src="./assets/images/common/about_decoration_2.png" alt="装飾">
       </div>
     </div>
-  </div>
+  </section>
   
-  <div class="point">
+  <section class="point js-fade-in" id="point">
     <div class="point__inner inner">
       <div class="point__title">
         <img src="./assets/images/common/point_title.svg" alt="6つのポイント">
@@ -211,44 +224,327 @@
         </li>
       </ul>
     </div>
-  </div>
+  </section>
 
-  <div class="section01">
-    <div class="section01__inner inner">
-      <div class="section01__top">
-        <img src="./assets/images/common/section01_top.jpg" alt="">
+  <section class="section-01 section js-fade-in" id="section-01">
+    <div class="section__top">
+      <img src="./assets/images/common/section01_top.jpg" alt="内海町の海">
+    </div>
+    <div class="section__inner inner">
+      <div class="section__number section__number--01">
+        <img src="./assets/images/common/section01_number.png" alt="1">
       </div>
-      <h2 class="section01__title">
-        <img src="./assets/images/common/section01_title.png" alt="内海町 田島のこと">
+      <h2 class="section__title">
+        <img src="./assets/images/common/section01_title.svg" alt="内海町 田島のこと">
       </h2>
-      <div class="section01__contents">
-        <div class="section01__message">
-          <h3 class="section01__sub-title">
+      <div class="section__contents section__contents--01 js-fade-in">
+        <h3 class="section__sp-title">
+          カラフルな水車が回ると、<br>海苔の季節
+        </h3>
+        <div class="section__img">
+          <img src="./assets/images/common/section01_img.jpg" alt="">
+        </div>
+        <div class="section__message">
+          <h3 class="section__pc-title">
             カラフルな水車が回ると、<br>海苔の季節
           </h3>
-          <div class="section01__img">
-            <img src="" alt="">
+          <div class="section__text">
+            <p>
+            広島県福山市内海町は広島県東南部の沼隈半島沖500メートルに浮かぶ島。田島と横島の二つの島から成る小さな町で、瀬戸内海のほぼ真ん中に位置している。本土から内海大橋（1989〈平成元〉年開通）を渡ると田島、さらに先に架かる睦橋を渡ると横島だ。田島と横島を地図上で見ると、タイとヒラメがキスしているように見えることから、二つの島を結ぶ睦橋はラブパワースポットとしても注目を浴びているとか。
+            </p>
+            <p>
+            紀伊水道と豊後水道からの水が交わるこの場所は昔から水産業が盛んで、海苔の養殖もその一つ。本格的に海苔のシーズンが始まる 10月初旬になると、海沿いに立ち並ぶ大きな水車に、青、紫、赤とカラフルな網が巻き付けられてぐるぐる回る光景が見られる。これは海苔の「種付け」作業で、この時期から春先まで内海町の海苔漁師たちは、極寒の瀬戸内海で多忙な毎日を送ることとなるのだ。
+            </p>
+            <p>
+              日の出とともにオレンジ色に輝き始める夜明け、高々と昇った太陽に照らされてキラキラ輝く日中、海に沈みゆく夕日が1日の幕を下ろす夕暮れ、しんと静まりかえり闇に包まれる夜…移り変わる瀬戸内海の風景が、内海町の時を刻んでいる。
+            </p>
           </div>
-        </div>
-        <div class="section01__text">
-          <p>
-          広島県福山市内海町は広島県東南部の沼隈半島沖500メートルに浮かぶ島。田島と横島の二つの島から成る小さな町で、瀬戸内海のほぼ真ん中に位置している。本土から内海大橋（1989〈平成元〉年開通）を渡ると田島、さらに先に架かる睦橋を渡ると横島だ。田島と横島を地図上で見ると、タイとヒラメがキスしているように見えることから、二つの島を結ぶ睦橋はラブパワースポットとしても注目を浴びているとか。
-          </p>
-          <p>
-          紀伊水道と豊後水道からの水が交わるこの場所は昔から水産業が盛んで、海苔の養殖もその一つ。本格的に海苔のシーズンが始まる 10月初旬になると、海沿いに立ち並ぶ大きな水車に、青、紫、赤とカラフルな網が巻き付けられてぐるぐる回る光景が見られる。これは海苔の「種付け」作業で、この時期から春先まで内海町の海苔漁師たちは、極寒の瀬戸内海で多忙な毎日を送ることとなるのだ。
-          </p>
-          <p>
-            日の出とともにオレンジ色に輝き始める夜明け、高々と昇った太陽に照らされてキラキラ輝く日中、海に沈みゆく夕日が1日の幕を下ろす夕暮れ、しんと静まりかえり闇に包まれる夜…移り変わる瀬戸内海の風景が、内海町の時を刻んでいる。
-          </p>
         </div>
       </div>
       
     </div>
+  </section>
+
+  <section class="section-02 section js-fade-in" id="section-02">
+    <div class="section__top section__top--02">
+      <img src="./assets/images/common/section02_top.jpg" alt="マルコ水産のこと">
+    </div>
+    <div class="section__inner inner secion__inner--02">
+      <div class="section__number section__number--02">
+        <img src="./assets/images/common/section02_number.png" alt="1">
+      </div>
+
+      <h2 class="section__title">
+        <img src="./assets/images/common/section02_title.svg" alt="マルコ水産のこと">
+      </h2>
+      <h3 class="section__sp-title">
+        個性と特技を結集し、同じ未来へ
+      </h3>
+      <div class="section__contents section__contents--02 js-fade-in">
+        <div class="section__img">
+          <img src="./assets/images/common/point05.jpg" alt="">
+        </div>
+        <div class="section__message">
+          <h3 class="section__pc-title">
+            個性と特技を結集し、同じ未来へ
+          </h3>
+          <div class="section__text">
+            <p>
+              マルコ水産は内海町で海苔と牡蠣の養殖を手がけている。会社を運営する兼田さん一家は両親に二男一女の五人家族。長男の寿敏さん、長女の佳織さん、次男の純次さんは三人とも一度は家を出てそれぞれの道を歩んだが、現在は全員が田島に戻り、共にマルコ水産でそれぞれの役割を果たしている。長女の佳織さんは事務作業を中心に直営店やオンラインショップの管理・運営、料理人として腕を磨いてきた次男の純次さんは三代目海苔師（弟）として海に出る傍ら、マルコ水産の商品開発において主に「味」の部分を担う。
+            </p>
+            <p>
+              長男の寿敏さんは、イベントや商談会など営業的な業務も精力的にこなしながら、三代目海苔師（兄）であるとともに牡蠣養殖部門の責任者を担う。大学を卒業後、全国にインポートブランドショップを展開する会社に就職し、商品の販売や買い付け、販促、企画、ネット事業の立ち上げ、店舗運営など幅広い経験を積んだ。18年間小売業の世界で勤め上げたのち、マルコ水産で第二の人生をスタート。前職の経験を生かし、漁師仕事だけでなく営業や小売り事業も担当し、現在成長中の牡蠣養殖事業を、創業時からの大黒柱である海苔と並ぶマルコ水産の恵比須柱として安定させるべく、奔走中だ。「本気でやれば一生の仕事にできる」と精力的に海に臨む毎日だが、海苔師に転向して以来、妻一人子二人を広島市に残して単身赴任中で、実家と自宅の往復の日々。なかなか家族に会えないことが一番の悩みだ。
+            </p>
+            <p>
+              家族それぞれ背負う役割は違えど、未来を守りたいという気持ちの強さは同じ。得意分野で各々が舵を取りながら、マルコ水産を前へ前へと推進している。向かう先には食べた人の「おいしい！」の笑顔が待っている。
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section-03 section js-fade-in" id="section-03">
+    <div class="section__top">
+      <img src="./assets/images/common/section03_top.jpg" alt="内海町の海">
+    </div>
+    <div class="section__inner inner">
+      <div class="section__number section__number--03">
+        <img src="./assets/images/common/section03_number.png" alt="1">
+      </div>
+      <h2 class="section__title">
+        <img src="./assets/images/common/section03_title.svg" alt="内海町 田島のこと">
+      </h2>
+      <h3 class="section__sp-title">
+        年中おいしい殻付き牡蠣「惑香」
+      </h3>
+      <div class="section__contents section__contents--03 js-fade-in">
+        <div class="section__imgs">
+          <div class="section__img03">
+            <img src="./assets/images/common/section03_img01.jpg" alt="">
+          </div>
+          <div class="section__img03">
+            <img src="./assets/images/common/section03_img02.jpg" alt="">
+          </div>
+        </div>
+        <div class="section__message">
+          <h3 class="section__pc-title">
+            年中おいしい殻付き牡蠣「惑香」
+          </h3>
+          <div class="section__text">
+            <p>
+              　形が整った美しい殻を開けると、むちっと白い肌が存在感を主張。弾力のある身がぷるんとお口に滑り込み、噛みしめるとしっかり育った貝柱とその身から甘みがふわっ…。雑味がなく、純粋な海水の塩味がうま味を際立たせる。公募で選ばれた「MADOKA」に「その風味と香りで人を惑わせるほど魅力的」という意味を込めて「惑香」と命名された（登録商標6663191号）。
+            </p>
+            <p>
+            　惑香の最大の特徴は、年中おいしく食べられること。「牡蠣を食べるなら『r』が付く月」と聞いたことはないだろうか。つまり月の英語表記で「r」が付く9月（September）から3月（March）に食べるのがお勧めということだが、この説の根拠の一つは、牡蠣の産卵期。牡蠣は3〜4月頃産卵の準備に入るため、栄養を蓄えるこの時期は身が太り味が濃くなる。この時期を過ぎると5〜8月は産卵期となり、体内に蓄えた栄養分を産卵に費やすため、身が痩せて水っぽくなってしまう。暑い時期は食中毒の心配も高まることから、冬場が推奨されてきたという経緯もある。
+            </p>
+            <p>
+              　ではなぜ惑香は年中おいしいのだろうか。それは、うま味や身入りを左右する「産卵」をしないよう改良されている品種（三倍体）だから。つまり、通常は産卵期に当たる時期も産卵による食味への影響を受けることがないため、一年を通して安定的に身入りが見込めるのだ。ただし、時期によって多少の上下はあり、あえて最良の時期を挙げるとすれば、やはり春先となる。
+            </p>
+            <p>
+              　惑香は全て殻付きで出荷される。殻付きの場合、むき身以上に身入りや形の良し悪しが問われるため、より高い技術が求められるが、あえてそこに挑戦するのがマルコ水産なのだ。
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <div class="section-04 section js-fade-in">
+    <div class="section__inner inner">
+      <h3 class="section__sp-title">
+        潮の干満に鍛えられ魅力UP
+      </h3>
+      <div class="section__contents section__contents--02 section__contents--end js-fade-in">
+        <div class="section__imgs">
+          <div class="section__img03">
+            <img src="./assets/images/common/section04_01.jpg" alt="">
+          </div>
+          <div class="section__img03">
+            <img src="./assets/images/common/section04_02.jpg" alt="">
+          </div>
+        </div>
+        <div class="section__message">
+          <h3 class="section__pc-title">
+            潮の干満に鍛えられ魅力UP
+          </h3>
+          <div class="section__text">
+            <p>
+            マルコ水産が扱う牡蠣の中でも、惑香は特別な養殖方法で育て上げる。特徴は大きく二つ。
+            </p>
+            <p>
+            一つは「シングルシードのはえ縄式」。一つ一つ（＝シングル）種（＝シード）を籠に入れて育てるシングルシード式と呼ばれる養殖方式を取っている。種が入った籠を、はえ縄式の漁場に張った縄につるして海中に入れることで、牡蠣が波に揺られながら、殻同士がぶつかり合って適度に殻が削られるため、栄養分が殻の成長に取られてしまうことなく身に行き届くこととなる。フジツボやヘドロなどの付着物が付きにくくきれいに育つのもメリットの一つだ。
+            </p>
+            <p>
+            もう一つは「杭打ち式」。浅瀬に杭を打って棚をつくり、牡蠣を入れた籠をつり下げる。この方法では潮の満ち干で牡蠣を入れた籠が水に浸かったり空気中に出たりするのがポイント。空気中に出ている間、牡蠣は海中の餌を食べられないので、一般的な養殖方法と比べて成長は遅くなるが、その間、体内の水分を漏らさないように固く殻を閉じるため、貝柱が鍛えられ甘みが強くなる。一般的に二枚貝は厳しい環境に置かれると、身を守るため体内にアミノ酸を蓄えるといわれており、このアミノ酸がうま味の成分となる。ただ、加減を間違えると牡蠣が耐えられずに死んでしまうという難しさもあり、そこが工夫や研究のしどころだという。
+          </div>
+        </div>
+      </div>
+
+      <div class="section__contents section__contents--0 js-fade-in">
+        <div class="section__img">
+          <img src="./assets/images/common/section04_03.jpg" alt="">
+        </div>
+        <div class="section__message">
+          <div class="section__text sectiont__text--top">
+            <p>
+              マルコ水産は内海町で海苔と牡蠣の養殖を手がけている。会社を運営する兼田さん一家は両親に二男一女の五人家族。長男の寿敏さん、長女の佳織さん、次男の純次さんは三人とも一度は家を出てそれぞれの道を歩んだが、現在は全員が田島に戻り、共にマルコ水産でそれぞれの役割を果たしている。長女の佳織さんは事務作業を中心に直営店やオンラインショップの管理・運営、料理人として腕を磨いてきた次男の純次さんは三代目海苔師（弟）として海に出る傍ら、マルコ水産の商品開発において主に「味」の部分を担う。
+            </p>
+            <p>
+              長男の寿敏さんは、イベントや商談会など営業的な業務も精力的にこなしながら、三代目海苔師（兄）であるとともに牡蠣養殖部門の責任者を担う。大学を卒業後、全国にインポートブランドショップを展開する会社に就職し、商品の販売や買い付け、販促、企画、ネット事業の立ち上げ、店舗運営など幅広い経験を積んだ。18年間小売業の世界で勤め上げたのち、マルコ水産で第二の人生をスタート。前職の経験を生かし、漁師仕事だけでなく営業や小売り事業も担当し、現在成長中の牡蠣養殖事業を、創業時からの大黒柱である海苔と並ぶマルコ水産の恵比須柱として安定させるべく、奔走中だ。「本気でやれば一生の仕事にできる」と精力的に海に臨む毎日だが、海苔師に転向して以来、妻一人子二人を広島市に残して単身赴任中で、実家と自宅の往復の日々。なかなか家族に会えないことが一番の悩みだ。
+            </p>
+            <p>
+              家族それぞれ背負う役割は違えど、未来を守りたいという気持ちの強さは同じ。得意分野で各々が舵を取りながら、マルコ水産を前へ前へと推進している。向かう先には食べた人の「おいしい！」の笑顔が待っている。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section__animation">
+      <img src="./assets/images/common/section_anmiation.png" alt="">
+      <img src="./assets/images/common/section_anmiation.png" alt="">
+      <img src="./assets/images/common/section_anmiation.png" alt="">
+      <img src="./assets/images/common/section_anmiation.png" alt="">
+    </div>
   </div>
 
-  <footer>
+  <div class="open js-fade-in">
+    <div class="open__inner inner">
+      <div class="open__titles">
+        <div class="open__title1">
+          <img src="./assets/images/common/open-title.svg" alt="">
+        </div>
+        <div class="open__title2">
+          <img src="./assets/images/common/scroll-right.svg" alt="">
+        </div>
+      </div>
+      <div class="open__list">
+        <ul class="open__contents">
+          <li class="open__item">
+            <img src="./assets/images/common/step01.jpg" alt="">
+            <div class="open__description">
+              <div class="open__step">
+                <img src="./assets/images/common/step01.svg" alt="">
+              </div>
+              <div class="open__text">
+                牡蠣の平らな面を上に向け、2時の場所にオイスターナイフを入れます。この付近に貝柱があります。
+              </div>
+            </div>
+          </li>
+          <li class="open__item">
+            <img src="./assets/images/common/step02.jpg" alt="">
+            <div class="open__description">
+              <div class="open__step">
+                <img src="./assets/images/common/step02.svg" alt="">
+              </div>
+              <div class="open__text">
+                上の殻の貝柱を切って殻を開けます。膜が付いている場合は切り離します。
+              </div>
+            </div>
+          </li>
+          <li class="open__item">
+            <img src="./assets/images/common/step03.jpg" alt="">
+            <div class="open__description">
+              <div class="open__step">
+                <img src="./assets/images/common/step03.svg" alt="">
+              </div>
+              <div class="open__text">
+                下の殻の貝柱も切ります。
+              </div>
+            </div>
+          </li>
+          <li class="open__item">
+            <img src="./assets/images/common/step04.jpg" alt="">
+            <div class="open__description">
+              <div class="open__step">
+                <img src="./assets/images/common/step04.svg" alt="">
+              </div>
+              <div class="open__text">
+                身を裏返すと見栄えが良くなります。
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
 
+    </div>
+  </div>
+
+
+  <div class="recipe js-fade-in">
+    <div class="recipe__inner inner">
+      <div class="recipe__top">
+        <div class="recipe__sub-title">
+          <img src="./assets/images/common/recipe.svg" alt="">
+        </div>
+        <div class="recipe__title">
+          <img src="./assets/images/common/recipe-title.svg" alt="">
+        </div>
+      </div>
+      <div class="recipe__contents">
+        <div class="recipe__img">
+          <img src="./assets/images/common/recipe-image.jpg" alt="">
+        </div>
+        <div class="recipe__description">
+          <p class="recipe__text">
+            ①真水で洗った牡蠣を鍋に入れ、少量の水を加えて蓋をして火にかける<br>
+            ②ムラなく火が通るように、途中で鍋を振って牡蠣を動かす<br>
+            ③ほとんどの牡蠣の殻が開いたら出来上がり！<br>
+          </p>
+          <p class="recipe__warning">
+            ※殻が開かないままのものは、オイスターナイフで開けてお召し上がりください。<br>
+            ※電子レンジを使用する場合は、耐熱容器に牡蠣を入れてふんわりラップをかけてから加熱してください。<br>
+            [500Ｗの場合、1個1分、3個3分が目安]
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="shop">
+    <div class="shop__link online-shop">
+      <a href="https://www.maruko526.jp/products/list?category_id=13">
+        <img src="./assets/images/common/shop_logo.png" alt="ONLINE SHOP">
+        <img src="./assets/images/common/shop-hover.png" alt="ONLINE SHOP">
+      </a>
+    </div>
+  </div>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__top">
+        <a href="#top">
+          <img src="./assets/images/common/top.svg" alt="">
+        </a>
+      </div>
+      <div class="footer__img">
+        <img src="./assets/images/common/madoka.png" alt="惑香">
+      </div>
+      <div class="footer__contents">
+        <div class="footer__guidance guidance">
+          <p class="guidance__name">マルコ水産有限会社</p>
+          <p class="guidance__text">〒722-2631　広島県福山市内海町イ1428-128</p>
+          <p class="guidance__tel">Tel.084-986-2399</p>
+          <p class="guidance__text guidance__text--fax">　Fax.084-986-2399</p>
+          <p class="guidance__text">営業時間 … 9：00〜17：00</p>
+        </div>
+        <div class="footer__text">
+          <img src="./assets/images/common/footer-text.svg" alt="">
+        </div>
+      </div>
+    </div>
   </footer>
+  <div class="map">
+    <img src="./assets/images/common/map.jpg" alt="地図">
+  </div>
+  <div class="copy">
+    &copy MARUKOSUISAN.Co
+  </div>
 </body>
 
 </html>

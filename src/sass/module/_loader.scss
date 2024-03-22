@@ -1,0 +1,54 @@
+@use "global" as *;
+
+.loader {
+    display: none;
+    @include mq(md){
+        display: block;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        min-height: rem(400);
+        z-index: 10000;
+        background-color: #fff;
+    }
+}
+
+.loader__img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.loader__img--01 {
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.loader__img--01.is-load {
+    opacity: 1;
+}
+
+.loader__img--02 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 2s;
+}
+
+.loader__img--02.is-load {
+    opacity: 1;
+}
+
+.loader__img--03 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 2s;
+}
+
+.loader__img--03.is-load {
+    opacity: 1;
+}

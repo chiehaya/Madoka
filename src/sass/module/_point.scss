@@ -2,6 +2,15 @@
 
 .point {
     position: relative;
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+    transform: translate(0, 50px);
+}
+
+.point.is-scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .point__title {
@@ -15,7 +24,7 @@
     display: block;
     width: 85%;
     max-width: rem(800);
-    height: 97%;
+    height: 93.5%;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -50,10 +59,10 @@
     @include mq(sm){
         max-width: rem(900);
         width: 79%;
-        height: 97%;
+        height: 93.5%;
     }
     @include mq(fl){
-        height: 95%;
+        height: 90%;
     }
     @include mq(md){
         max-width: rem(1100);
@@ -74,7 +83,7 @@
     @include mq(fl){
         flex-direction: row;
         flex-wrap: wrap;
-        gap: rem(15);
+        gap: rem(40) rem(15);
         max-width: rem(600);
         margin: rem(50) auto 0;
     }

@@ -1,0 +1,273 @@
+@use "global" as *;
+
+.section {
+    margin-top: rem(100);
+    position: relative;
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+    transform: translate(0, 50px);
+    @include mq(md){
+        margin-top: rem(320);
+    }
+}
+
+.section.is-scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+
+.section__inner {
+    max-width: rem(700);
+    @include mq(md){
+    }
+}
+
+.section__inner.inner {
+    @include mq(sm){
+        max-width: rem(1360);
+        padding-left: rem(80);
+        padding-right: rem(80);
+    }
+}
+
+.section__number {
+    position: absolute;
+    top: -4%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    @include mq(md){
+        top: -8%;
+    }
+}
+
+.section__number--01 {
+    width: rem(60);
+    @include mq(md){
+        width: rem(88);
+    }
+}
+
+.section__number--02 {
+    width: rem(60);
+    @include mq(md){
+        width: rem(120);
+    }
+}
+
+.section__number--03 {
+    width: rem(60);
+    @include mq(md){
+        width: rem(110);
+    }
+}
+
+.section__top {
+    width: 100%;
+    position: relative;
+    height: rem(140);
+    @include mq(md){
+        height: rem(380);
+    }
+}
+
+.section__top img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.section__top--02 img{
+    object-position: top;
+}
+
+.section__top::after {
+    content: "";
+    background: url(../../assets/images/common/nami.png);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: rem(35);
+    bottom: 0;
+}   
+
+.section__title {
+    width: rem(250);
+    position: absolute;
+    top: 6%;
+    left: 50%;
+    transform: translateX(-50%);
+    @include mq(md){
+        width: rem(500);
+    }
+}
+
+.section__contents {
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+    transform: translate(0, 50px);
+    @include mq(md){
+        display: flex;
+        gap: 8%;
+        justify-content: center;
+        align-items: start;
+        margin-top: rem(90);
+    }
+}
+
+.section__contents.is-scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.section__contents--01 {
+}
+
+.section__contents--02 {
+    @include mq(md){
+        flex-direction: row-reverse;
+    }
+}
+
+.section__contents--end {
+    @include mq(md){
+        align-items: end;
+    }
+}
+
+.section__img {
+    margin-top: rem(20);
+    @include mq(md){
+        margin-top: 0;
+        width: 46%;
+        max-width: 100%;
+        height: rem(570);
+    }
+}
+
+.section__img img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.section__imgs {
+    margin-top: rem(20);
+    @include mq(md){
+        margin-top: 0;
+        width: 46%;
+        max-width: 100%;
+    }
+}
+
+.section__img03 {
+    @include mq(md){
+        height: rem(380);
+    }
+}
+
+.section__img03:not(:first-of-type) {
+    margin-top: rem(10);
+}
+
+.section__img03 img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.section__message {
+    margin-top: rem(20);
+    @include mq(md){
+        margin-top: 0;
+        width: 46%;
+        min-width: rem(500);
+    }
+}
+
+.section__sp-title {
+    color: $accent-color;
+    font-size: rem(18);
+    line-height: 1.8;
+    font-weight: $normal;
+    font-family: $forth-font-family;
+    letter-spacing: 0.1em;
+    @include mq(md){
+        display: none;
+        font-size: rem(25);
+        line-height: 2;
+    }
+}
+
+
+.section__pc-title {
+    display: none;
+    @include mq(md){
+        color: $accent-color;
+        display: block;
+        font-weight: $normal;
+        font-family: $forth-font-family;
+        letter-spacing: 0.1em;
+        font-size: rem(25);
+        line-height: 2;
+    }
+}
+
+.section__text {
+    font-size: rem(13);
+    letter-spacing: -0.07em;
+    line-height: 1.9;
+    margin-top: rem(20);
+    @include mq(md){
+        font-size: rem(15);
+    }
+}
+
+.section__text p:not(:first-of-type) {
+    margin-top: rem(20);
+}
+
+.sectiont__text--top {
+    margin-top: 0;
+}
+
+.section__animation {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+}
+
+.section__animation img {
+    width: rem(2000);
+}
+
+.section__animation img:nth-child(odd) {
+    animation: loop 60s -30s linear infinite;
+    padding-right: 20px;
+}
+
+.section__animation img:nth-child(even) {
+    animation: loop2 60s linear infinite;
+    padding-right: 10px;
+}
+
+@keyframes loop {
+    0% {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes loop2 {
+    0% {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}

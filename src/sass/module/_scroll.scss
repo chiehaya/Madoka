@@ -1,0 +1,8 @@
+@use "global" as *;
+
+html {
+    scroll-padding-top: rem(150);
+    @include mq(md){
+        scroll-padding-top: rem(205);
+    }
+}

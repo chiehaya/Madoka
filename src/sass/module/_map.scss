@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.map {
+    position: relative;
+}
+
+.map::before {
+    content: "";
+    background: url(../../assets/images/common/nami.png);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: rem(35);
+    bottom: 0;
+}

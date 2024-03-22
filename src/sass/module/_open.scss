@@ -1,0 +1,93 @@
+@use "global" as *;
+
+.open {
+    margin-top: rem(120);
+    opacity: 0;
+    transition-duration: 500ms;
+    transition-property: opacity, transform;
+    transform: translate(0, 50px);
+    @include mq(sm){
+        padding-left: rem(80);
+    }
+    @include mq(md){
+        margin-top: rem(200);
+        padding-left: rem(100);
+    }
+}
+
+.open.is-scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.open__inner {
+    background-image: url(../../assets/images/common/background.jpg);
+}
+
+.open__inner.inner {
+    padding: rem(40) 0;
+    @include mq(md){
+        max-width: 100%;
+    }
+}
+
+.open__titles {
+    display: flex;
+    width: rem(360);
+    align-items: end;
+    gap: rem(80);
+    padding-left: rem(40);
+    @include mq(md){
+        width: rem(404);
+    }
+}
+
+.open__title1 {
+    width: rem(201);
+}
+
+.open__title2 {
+    width: rem(119);
+}
+
+.open__list {
+    overflow: auto;
+    scrollbar-width: none;
+}
+
+.open__list::-webkit-scrollbar{
+    display:none;
+ }
+
+.open__contents {
+    display: flex;
+    margin-top: rem(35);
+    padding: 0 rem(60);
+    flex-wrap: nowrap;
+    gap: rem(92);
+    flex: none;
+    width: rem(1500);
+}
+
+.open__item {
+    width: rem(265);
+
+}
+
+.open__description {
+
+}
+
+.open__step {
+    margin-top: rem(13);
+    width: rem(68);
+}
+
+.open__text {
+    margin-top: rem(18);
+    font-size: rem(15);
+    font-family: $forth-font-family;
+    font-weight: $regular;
+
+}
+
