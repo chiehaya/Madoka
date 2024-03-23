@@ -1,23 +1,29 @@
 @use "global" as *;
 
 .loader {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    min-height: rem(400);
+    z-index: 10000;
+    background-color: #fff;
+}
+
+.loader.is-load {
     display: none;
-    @include mq(md){
-        display: block;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        min-height: rem(400);
-        z-index: 10000;
-        background-color: #fff;
-    }
 }
 
 .loader__img {
+    height: 100vh;
+    width: 100%;
+}
+
+.loader__img img {
     object-fit: cover;
-    object-position: center;
+    width: 100%;
+    height: 100%;
 }
 
 .loader__img--01 {

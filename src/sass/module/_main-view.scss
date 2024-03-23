@@ -2,6 +2,7 @@
 
 .main-view {
     height: 100vh;
+    width: 100%;
     background-image: url(../../assets/images/common/fv_01.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -9,10 +10,31 @@
     align-items: center;
     background-position: center;
     position: relative;
+    opacity: 0;
+    transition: 2s;
     @include mq(md){
         justify-content: center;
     }
 }
+
+.main-view.is-load {
+    opacity: 1;
+    animation-name:zoomInAnime;
+    animation-duration:1.5s;
+    animation-fill-mode:forwards;
+}
+
+
+@keyframes zoomInAnime{
+    from {
+    transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
 
 .main-view__inner {
     padding: 0 rem(20);
@@ -25,47 +47,65 @@
 .main-view__title {
     max-width: rem(463);
     margin: 0 auto;
+    opacity: 0;
+    transition: 2s;
     @include mq(sm){
         width: 80%;
     }
     @include mq(md){
-        max-width: rem(620);
+        max-width: rem(652);
         width: 100%;
     }
+}
 
+.main-view__title.is-load {
+    opacity: 1;
 }
 
 .main-view__left {
     display: none;
         @include mq(sm){
             display: block;
+            opacity: 0;
             position: fixed;
-            left: rem(30);
-            bottom: 17%;
-            transform: translateY(-50%);
-            width: 25px;
+            left: rem(19);
+            top: 40%;
+            width: rem(25);
             z-index: 10;
+            transition: 1s;
+            transform: translate(-50px, 0);
         }
         @include mq(md){
-            bottom: 10%;
+            top: 31%;
+            left: rem(40);
         }
 }
+
 
 .main-view__right {
     display: none;
     @include mq(sm){
         display: block;
+        opacity: 0;
         display: block;
         position: fixed;
+        top: 40%;
         right: rem(30);
         bottom: 23%;
-        transform: translateY(-50%);
         width: 25px;
         z-index: 10;
+        transition: 1s;
+        transform: translate(50px, 0);
     }
     @include mq(md){
-        bottom: 15%;
+        top: 32%;
+        right: rem(40);
     }
+}
+
+.main-view__left.is-load,.main-view__right.is-load {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .main-view__decoration {

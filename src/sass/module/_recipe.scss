@@ -71,7 +71,7 @@
 }
 
 .recipe__title::before {
-    @include mq(sm){
+    @include mq(md){
         content: "";
         background-image: url(../../assets/images/common/recipe-deco.svg);
         background-repeat: no-repeat;

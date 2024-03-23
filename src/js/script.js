@@ -1,14 +1,14 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
     function openDrawer() {
-        $(".js-sp-nav").fadeIn();
+        $(".js-sp-nav").addClass("is-open");
         $(".js-hamburger").addClass("is-open");
         $("body").css("overflow", "hidden");
         $(hamburger).removeClass('is-open');
     }
 
     function closeDrawer() {
-        $(".js-sp-nav").fadeOut();
+        $(".js-sp-nav").removeClass("is-open");
         $(".js-hamburger").removeClass("is-open");
         $("body").css("overflow", "initial");
     }
@@ -112,6 +112,25 @@ $(function () {
     function close03() {
         $('.js-load03').removeClass("is-load");
     }
+    function loader() {
+        $('.js-loader').addClass("is-load");
+    }
+    function mainView() {
+        $('.js-main-view').addClass("is-load");
+    }
+    function mainTitle() {
+        $('.js-main-title').addClass("is-load");
+    }
+    function mainLeft() {
+        $('.js-main-left').addClass("is-load");
+    }
+    function mainRight() {
+        $('.js-main-right').addClass("is-load");
+    }
+    function header() {
+        $('.js-header').addClass("is-load");
+    }
+
 
     $(window).on('load', function () {
     setTimeout(function () {
@@ -136,8 +155,27 @@ $(function () {
         close03();
     }, 6700);
     setTimeout(function () {
+        loader();
+    }, 8200);
+    setTimeout(function () {
+        mainView();
+    }, 8700);
+    setTimeout(function () {
+        mainTitle();
+    }, 9500);
+    setTimeout(function () {
+        mainLeft();
+    }, 11000);
+    setTimeout(function () {
+        mainRight();
+    }, 11000);
+    setTimeout(function () {
+        header();
+    }, 11000);
+
+    setTimeout(function () {
         initial();
-    }, 8000)
+    }, 7000)
     })
 
 });

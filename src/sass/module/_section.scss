@@ -1,15 +1,11 @@
 @use "global" as *;
 
 .section {
-    margin-top: rem(100);
     position: relative;
     opacity: 0;
     transition-duration: 500ms;
     transition-property: opacity, transform;
     transform: translate(0, 50px);
-    @include mq(md){
-        margin-top: rem(320);
-    }
 }
 
 .section.is-scroll-in {
@@ -39,28 +35,28 @@
     transform: translateX(-50%);
     z-index: 1;
     @include mq(md){
-        top: -8%;
+        top: -7%;
     }
 }
 
 .section__number--01 {
     width: rem(60);
     @include mq(md){
-        width: rem(88);
+        width: rem(104);
     }
 }
 
 .section__number--02 {
     width: rem(60);
     @include mq(md){
-        width: rem(120);
+        width: rem(166);
     }
 }
 
 .section__number--03 {
     width: rem(60);
     @include mq(md){
-        width: rem(110);
+        width: rem(140);
     }
 }
 
@@ -69,7 +65,7 @@
     position: relative;
     height: rem(140);
     @include mq(md){
-        height: rem(380);
+        height: rem(388);
     }
 }
 
@@ -100,7 +96,8 @@
     left: 50%;
     transform: translateX(-50%);
     @include mq(md){
-        width: rem(500);
+        width: rem(400);
+        top: 11%;
     }
 }
 
@@ -111,7 +108,7 @@
     transform: translate(0, 50px);
     @include mq(md){
         display: flex;
-        gap: 8%;
+        gap: 7%;
         justify-content: center;
         align-items: start;
         margin-top: rem(90);
@@ -144,8 +141,15 @@
         margin-top: 0;
         width: 46%;
         max-width: 100%;
-        height: rem(570);
     }
+}
+
+.section__img--01 {
+    aspect-ratio: 550 / 590 ;
+}
+
+.section__img--02 {
+    aspect-ratio: 574 / 748 ;
 }
 
 .section__img img {
@@ -183,7 +187,7 @@
     margin-top: rem(20);
     @include mq(md){
         margin-top: 0;
-        width: 46%;
+        width: 47%;
         min-width: rem(500);
     }
 }
@@ -211,7 +215,7 @@
         font-weight: $normal;
         font-family: $forth-font-family;
         letter-spacing: 0.1em;
-        font-size: rem(25);
+        font-size: rem(30);
         line-height: 2;
     }
 }
@@ -228,6 +232,9 @@
 
 .section__text p:not(:first-of-type) {
     margin-top: rem(20);
+    @include mq(md){
+        margin-top: rem(41);
+    }
 }
 
 .sectiont__text--top {

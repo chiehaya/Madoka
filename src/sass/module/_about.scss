@@ -1,15 +1,16 @@
 @use "global" as *;
 
 .about {
-    margin: rem(80) auto;
+    margin: rem(80) auto 0;
     position: relative;
     max-width: rem(660);
     @include mq(sm){
-        margin: rem(260) auto;
+        margin: rem(260) auto 0;
     }
     @include mq(md){
-        margin: rem(280) auto;
-        max-width: rem(990);
+        margin: rem(280) auto 0;
+        max-width: rem(1380);
+        padding: 0 rem(80);
     }
 }
 
@@ -24,22 +25,21 @@
     width: 90%;
     margin: 0 auto;
     @include mq(md){
-        width: 80%;
+        width: 60%;
+        padding-top: rem(60);
     }
 }
 
-
 .about__text {
     font-size: rem(14);
-    margin-top: rem(30);
-    margin: 0 auto;
+    margin: rem(30) auto 0;
     text-align: center;
     line-height: 2.18;
     letter-spacing: -0.05em;
-    font-family: $second-font-family;
     font-weight: 400;
     @include mq(md){
-        font-size: rem(18);
+        font-size: rem(19);
+        margin-top: 0;
         writing-mode: vertical-rl;
         text-align: left;
         letter-spacing: 0.07em;
@@ -51,7 +51,7 @@
     width: 80%;
     margin: 0 auto;
     @include mq(md){
-        width: rem(420);
+        width: rem(500);
     }
 }
 
@@ -65,9 +65,9 @@
         left: max(50% - 36vw, -2.5rem);
     }
     @include mq(md){
-    top: rem(-200);
+    top: rem(-135);
     width: rem(620);
-    left: max(50% - 43vw, -7.5rem);
+    left: max(50% - 44vw, 6rem);
 }
 }
 
@@ -90,8 +90,8 @@
         right: max(50% - 36vw, -2.5rem);
     }
     @include mq(md){
-    bottom: rem(-200);
-    width: rem(620);
+    bottom: rem(-112);
+    width: rem(448);
     right: max(50% - 43vw, -7.5rem);
 }
 }
@@ -99,6 +99,7 @@
 .about__contents {
     @include mq(md){
         display: flex;
+        flex-direction: row-reverse;
         justify-content: center;
         align-items: center;
         left: rem(-20);

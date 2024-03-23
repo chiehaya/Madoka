@@ -29,6 +29,17 @@
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
+  <div class="loader js-loader">
+    <div class="loader__img loader__img--01 js-load01">
+      <img src="./assets/images/common/loader01.jpg" alt="">
+    </div>
+    <div class="loader__img loader__img--02 js-load02">
+      <img src="./assets/images/common/loader02.jpg" alt="">
+    </div>
+    <div class="loader__img loader__img--03 js-load03">
+      <img src="./assets/images/common/loader03.jpg" alt="">
+    </div>
+  </div>
   <header class="header js-header">
     <div class="header__inner">
       <h1 class="header__logo">
@@ -48,7 +59,7 @@
           </div>
           <ul class="sp-nav__items">
             <li class="sp-nav__item">
-              <a href="/" class="sp-nav__link sp-nav__link--top">TOP</a>
+              <a href="#top" class="sp-nav__link sp-nav__link--top">TOP</a>
             </li>
             <li class="sp-nav__item">
               <a href="#point" class="sp-nav__link">6つのポイント</a>
@@ -103,30 +114,17 @@
   <main>
   <div class="main-view js-main-view">
     <div class="main-view__inner">
-      <div class="main-view__title">
+      <div class="main-view__title js-main-title">
         <img src="./assets/images/common/madoka.png" alt="惑香">
-      </div>
-      <div class="main-view__left">
-        <img src="./assets/images/common/oyster.jpg" alt="オイスター 広島ブランド">
-      </div>
-      <div class="main-view__right">
-        <img src="./assets/images/common/marukosuisan.jpg" alt="マルコ水産 タシマ">
       </div>
     </div>
   </div>
 
-  <div class="loader">
-    <div class="loader__inner">
-      <div class="loader__img loader__img--01 js-load01">
-        <img src="./assets/images/common/loader01.jpg" alt="">
-      </div>
-      <div class="loader__img loader__img--02 js-load02">
-        <img src="./assets/images/common/loader02.jpg" alt="">
-      </div>
-      <div class="loader__img loader__img--03 js-load03">
-        <img src="./assets/images/common/loader03.jpg" alt="">
-      </div>
-    </div>
+  <div class="main-view__left js-main-left">
+    <img src="./assets/images/common/oyster.jpg" alt="オイスター 広島ブランド">
+  </div>
+  <div class="main-view__right js-main-right">
+    <img src="./assets/images/common/marukosuisan.jpg" alt="マルコ水産 タシマ">
   </div>
 
   <section class="about">
@@ -241,7 +239,7 @@
         <h3 class="section__sp-title">
           カラフルな水車が回ると、<br>海苔の季節
         </h3>
-        <div class="section__img">
+        <div class="section__img section__img--01">
           <img src="./assets/images/common/section01_img.jpg" alt="">
         </div>
         <div class="section__message">
@@ -281,8 +279,8 @@
         個性と特技を結集し、同じ未来へ
       </h3>
       <div class="section__contents section__contents--02 js-fade-in">
-        <div class="section__img">
-          <img src="./assets/images/common/point05.jpg" alt="">
+        <div class="section__img section__img--02">
+          <img src="./assets/images/common/section02_img.jpg" alt="">
         </div>
         <div class="section__message">
           <h3 class="section__pc-title">
