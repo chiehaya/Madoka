@@ -2,60 +2,37 @@
 
 jQuery(function ($) {
   // この中であればWordpressでも「$」が使用可能になる
+  var hamburger = $(".js-hamburger");
+  var close = $(".js-close");
+  var spNav = $(".js-sp-nav");
   function openDrawer() {
     $(".js-sp-nav").addClass("is-open");
-    $(".js-hamburger").addClass("is-open");
     $("body").css("overflow", "hidden");
-    $(hamburger).removeClass('is-open');
   }
   function closeDrawer() {
     $(".js-sp-nav").removeClass("is-open");
-    $(".js-hamburger").removeClass("is-open");
     $("body").css("overflow", "initial");
   }
-  var hamburger = $(".js-hamburger");
-  var close = $(".js-close");
   $(function () {
     $(hamburger).on("click", function () {
-      $(this).toggleClass("is-open");
-      if ($(this).hasClass("is-open")) {
-        openDrawer();
-      } else {
+      if ($(spNav).hasClass("is-open")) {
         closeDrawer();
+      } else {
+        openDrawer();
       }
     });
   });
   $(function () {
     $(close).on("click", function () {
-      $(hamburger).toggleClass("is-open");
-      if ($(this).hasClass("is-open")) {
-        openDrawer();
-      } else {
+      if ($(spNav).hasClass("is-open")) {
         closeDrawer();
+      } else {
+        openDrawer();
       }
     });
   });
-  $(function () {
-    $(body).on("click", function () {
-      $(hamburger).toggleClass("is-open");
-      if ($(this).hasClass("is-open")) {
-        openDrawer();
-      } else {
-        closeDrawer();
-      }
-    });
-  });
-
-  // backgroundまたはページ内リンクをクリックで閉じる
   $(".js-sp-nav a[href]").on("click", function () {
     closeDrawer();
-  });
-
-  // resizeイベント
-  $(window).on('resize', function () {
-    if (window.matchMedia("(min-width: 768px)").matches) {
-      closeDrawer();
-    }
   });
   $(window).on('scroll', function () {
     var top = $(this).scrollTop();
@@ -122,48 +99,46 @@ $(function () {
   function header() {
     $('.js-header').addClass("is-load");
   }
-  $(window).on('load', function () {
-    setTimeout(function () {
-      fixed();
-    }, 0);
-    setTimeout(function () {
-      load01();
-    }, 100);
-    setTimeout(function () {
-      close01();
-    }, 2000);
-    setTimeout(function () {
-      load02();
-    }, 2200);
-    setTimeout(function () {
-      close02();
-    }, 4200);
-    setTimeout(function () {
-      load03();
-    }, 4500);
-    setTimeout(function () {
-      close03();
-    }, 6700);
-    setTimeout(function () {
-      loader();
-    }, 8200);
-    setTimeout(function () {
-      mainView();
-    }, 8700);
-    setTimeout(function () {
-      mainTitle();
-    }, 9500);
-    setTimeout(function () {
-      mainLeft();
-    }, 11000);
-    setTimeout(function () {
-      mainRight();
-    }, 11000);
-    setTimeout(function () {
-      header();
-    }, 11000);
-    setTimeout(function () {
-      initial();
-    }, 7000);
-  });
+  setTimeout(function () {
+    fixed();
+  }, 0);
+  setTimeout(function () {
+    load01();
+  }, 100);
+  setTimeout(function () {
+    close01();
+  }, 2000);
+  setTimeout(function () {
+    load02();
+  }, 2200);
+  setTimeout(function () {
+    close02();
+  }, 4200);
+  setTimeout(function () {
+    load03();
+  }, 4500);
+  setTimeout(function () {
+    close03();
+  }, 6700);
+  setTimeout(function () {
+    loader();
+  }, 8200);
+  setTimeout(function () {
+    mainView();
+  }, 8700);
+  setTimeout(function () {
+    mainTitle();
+  }, 9500);
+  setTimeout(function () {
+    mainLeft();
+  }, 11000);
+  setTimeout(function () {
+    mainRight();
+  }, 11000);
+  setTimeout(function () {
+    header();
+  }, 11000);
+  setTimeout(function () {
+    initial();
+  }, 7000);
 });

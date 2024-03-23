@@ -1,17 +1,13 @@
 @use "global" as *;
 
 .open {
-    margin-top: rem(120);
+    margin-top: rem(80);
     opacity: 0;
     transition-duration: 500ms;
     transition-property: opacity, transform;
     transform: translate(0, 50px);
-    @include mq(sm){
-        padding-left: rem(80);
-    }
     @include mq(md){
         margin-top: rem(200);
-        padding-left: rem(100);
     }
 }
 
@@ -20,30 +16,31 @@
     transform: translate(0, 0);
 }
 
-.open__inner {
-    background-image: url(../../assets/images/common/background.jpg);
-}
 
-.open__inner.inner {
-    padding: rem(40) 0;
+.open__container {
+    background-image: url(../../assets/images/common/background.jpg);
+    padding: rem(45) rem(20) rem(60) rem(10);
     @include mq(md){
-        max-width: 100%;
+        padding: rem(60) 0 rem(80) rem(40) ;
     }
 }
 
 .open__titles {
     display: flex;
-    width: rem(360);
-    align-items: end;
-    gap: rem(80);
-    padding-left: rem(40);
+    flex-direction: column;
+    width: rem(300);
+    align-items: center;
+    gap: rem(10);
     @include mq(md){
-        width: rem(404);
+        width: rem(489);
+        flex-direction: row;
+        align-items: end;
+        gap: rem(80);
     }
 }
 
 .open__title1 {
-    width: rem(201);
+    width: rem(207);
 }
 
 .open__title2 {
@@ -57,25 +54,63 @@
 
 .open__list::-webkit-scrollbar{
     display:none;
- }
+}
 
 .open__contents {
     display: flex;
     margin-top: rem(35);
-    padding: 0 rem(60);
+    margin-left: rem(35);
     flex-wrap: nowrap;
     gap: rem(92);
     flex: none;
     width: rem(1500);
+    position: relative;
+}
+
+.open__contents::before {
+    content: "";
+    background-image: url(../../assets/images/common/start.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    display: block;
+    top: 7%;
+    left: -2%;
+    width: rem(93);
+    height: rem(100);
+    z-index: 10;
 }
 
 .open__item {
     width: rem(265);
-
+    position: relative;
 }
 
-.open__description {
+.open__item::after {
+    content: "";
+    position: absolute;
+    display: block;
+    right: -20%;
+    top: 26%;
+    width: 0;
+    height: 0;
+    border-left: 15px solid black;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+}
 
+.open__item--last::after {
+    content: "";
+    background-image: url(../../assets/images/common/finish.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    display: block;
+    top: 7%;
+    left: -8%;
+    border: none;
+    width: rem(100);
+    height: rem(100);
 }
 
 .open__step {
@@ -84,10 +119,9 @@
 }
 
 .open__text {
-    margin-top: rem(18);
+    margin-top: rem(11);
     font-size: rem(15);
     font-family: $forth-font-family;
     font-weight: $regular;
-
 }
 

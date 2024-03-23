@@ -2,11 +2,11 @@
 
 // インナー幅設定
 // コンテンツのインナー幅（最も共通の幅が多い部分）
-$inner: 1100px;
+$inner: 1200px;
 // ※キュンパス幅ではなくインナーの幅を指す
 
 // 余白
-$padding-pc: 25px;
+$padding-pc: 100px;
 $padding-sp: 20px;
 
 ////////////////////
@@ -22,6 +22,8 @@ $forth-font-family: "Sawarabi Gothic", sans-serif;
 
 body {
   font-family: $base-font-family;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; /* Safari */
 }
 
 // フォントウェイト

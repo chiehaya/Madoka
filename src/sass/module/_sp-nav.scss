@@ -9,7 +9,7 @@ $close-color: $white;
 
 .sp-nav__close {
     position: relative;
-    height: rem(44);
+    height: rem(35);
     cursor: pointer;
 }
 
@@ -24,13 +24,13 @@ $close-color: $white;
 
 .sp-nav__close span:nth-child(1) {
     top: rem(26);
-    rotate: 45deg;
+    transform: rotate(45deg);
     right: rem(14);
 }
 
 .sp-nav__close span:nth-child(2) {
 	top: rem(26);
-    rotate: -45deg;
+    transform: rotate(-45deg);
     right: rem(14);
 }
 
@@ -56,11 +56,11 @@ $close-color: $white;
 }
 
 .sp-nav__guidance {
-    margin-top: rem(30);
+    margin-top: rem(15);
 }
 
 .sp-nav__shop {
     width: rem(240);
-    margin: rem(30) auto 0;
+    margin: rem(15) auto 0;
 }
 

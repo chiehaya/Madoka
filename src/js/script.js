@@ -1,64 +1,42 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
+    const hamburger = $(".js-hamburger");
+    const close = $(".js-close")
+    const spNav = $(".js-sp-nav")
+
     function openDrawer() {
         $(".js-sp-nav").addClass("is-open");
-        $(".js-hamburger").addClass("is-open");
         $("body").css("overflow", "hidden");
-        $(hamburger).removeClass('is-open');
     }
-
+    
     function closeDrawer() {
         $(".js-sp-nav").removeClass("is-open");
-        $(".js-hamburger").removeClass("is-open");
         $("body").css("overflow", "initial");
     }
     
-    const hamburger = $(".js-hamburger");
-    const close = $(".js-close")
-
     $(function () {
         $(hamburger).on("click", function () {
-            $(this).toggleClass("is-open");
-            if ($(this).hasClass("is-open")) {
-                openDrawer();
-            } else {
+            if ($(spNav).hasClass("is-open")) {
                 closeDrawer();
+            } else {
+                openDrawer();
             }
         });
     });
 
     $(function () {
         $(close).on("click", function () {
-            $(hamburger).toggleClass("is-open");
-            if ($(this).hasClass("is-open")) {
-                openDrawer();
-            } else {
+            if ($(spNav).hasClass("is-open")) {
                 closeDrawer();
+            } else {
+                openDrawer();
             }
         });
     });
 
-    $(function () {
-    $(body).on("click",function(){
-        $(hamburger).toggleClass("is-open");
-            if ($(this).hasClass("is-open")) {
-                openDrawer();
-            } else {
-                closeDrawer();
-            }
-        });
-    });
 
-// backgroundまたはページ内リンクをクリックで閉じる
 $(".js-sp-nav a[href]").on("click", function () {
     closeDrawer();
-});
-
-// resizeイベント
-$(window).on('resize', function() {
-    if (window.matchMedia("(min-width: 768px)").matches) {
-        closeDrawer();
-    }
 });
 
 $(window).on('scroll',function(){
@@ -132,7 +110,6 @@ $(function () {
     }
 
 
-    $(window).on('load', function () {
     setTimeout(function () {
         fixed();
     }, 0);
@@ -175,7 +152,7 @@ $(function () {
 
     setTimeout(function () {
         initial();
-    }, 7000)
-    })
+    }, 7000);
+
 
 });

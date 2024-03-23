@@ -3,21 +3,13 @@
 .about {
     margin: rem(80) auto 0;
     position: relative;
-    max-width: rem(660);
+    max-width: rem(800);
     @include mq(sm){
         margin: rem(260) auto 0;
     }
     @include mq(md){
         margin: rem(280) auto 0;
         max-width: rem(1380);
-        padding: 0 rem(80);
-    }
-}
-
-.about__inner.inner {
-    @include mq(sm){
-        padding-left: rem(50);
-        padding-right: rem(50);
     }
 }
 
@@ -37,6 +29,9 @@
     line-height: 2.18;
     letter-spacing: -0.05em;
     font-weight: 400;
+    @include mq(sm){
+        font-size: rem(16);
+    }
     @include mq(md){
         font-size: rem(19);
         margin-top: 0;
@@ -51,7 +46,7 @@
     width: 80%;
     margin: 0 auto;
     @include mq(md){
-        width: rem(500);
+        width: 48%;
     }
 }
 
