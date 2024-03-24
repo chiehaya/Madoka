@@ -228,6 +228,13 @@
     }
 }
 
+.section__text p {
+    text-indent: rem(13);
+    @include mq(md){
+        text-indent: rem(15);
+    }
+}
+
 .section__text p:not(:first-of-type) {
     margin-top: rem(20);
     @include mq(md){
@@ -235,7 +242,7 @@
     }
 }
 
-.sectiont__text--top {
+.section__text--top {
     margin-top: 0;
 }
 

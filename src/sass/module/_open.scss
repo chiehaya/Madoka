@@ -31,7 +31,9 @@
     width: rem(300);
     align-items: center;
     gap: rem(10);
+    margin: 0 auto;
     @include mq(md){
+        margin: initial;
         width: rem(489);
         flex-direction: row;
         align-items: end;

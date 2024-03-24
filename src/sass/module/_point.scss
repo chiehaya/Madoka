@@ -80,6 +80,7 @@
     gap: rem(23);
     @include mq(fl){
         gap: rem(63);
+        
     }
     @include mq(md){
         flex-direction: row;
@@ -91,6 +92,7 @@
         padding-left: rem(48);
         padding-right: rem(48);
         padding-bottom: rem(65);
+        align-items: baseline;
     }
 }
 
@@ -128,32 +130,32 @@
 }
 
 
-.poinst__list--1::after {
+.point__list--1::after {
     background-image: url(../../assets/images/common/number1.svg);
     
 }
 
-.poinst__list--2::after {
+.point__list--2::after {
     background-image: url(../../assets/images/common/number2.svg);
 }
 
 
-.poinst__list--3::after {
+.point__list--3::after {
     background-image: url(../../assets/images/common/number3.svg);
 }
 
 
-.poinst__list--4::after {
+.point__list--4::after {
     background-image: url(../../assets/images/common/number4.svg);
 }
 
 
-.poinst__list--5::after {
+.point__list--5::after {
     background-image: url(../../assets/images/common/number5.svg);
 }
 
 
-.poinst__list--6::after {
+.point__list--6::after {
     background-image: url(../../assets/images/common/number6.svg);
 }
 
