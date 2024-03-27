@@ -1,29 +1,37 @@
 @use "global" as *;
 
 .section-04 {
-    background: linear-gradient(180deg, transparent 0%, transparent 2%, #eceded 2%, #eceded 100%);
+    background: linear-gradient(180deg, transparent 0%, transparent 1%, #eceded 1%, #eceded 100%);
     position: relative;
-    padding-top: rem(32);
+    padding-top: rem(48);
     padding-bottom: rem(64);
+    margin-top: rem(40);
     @include mq(sm){
         padding-bottom: rem(150);
     }
     @include mq(md){
-        background: linear-gradient(180deg, transparent 0%, transparent 14%, #eceded 14%, #eceded 100%);
+        margin-top: 0;
+        background: linear-gradient(180deg, transparent 0%, transparent 12%, #eceded 12%, #eceded 100%);
+        padding-top: rem(32);
         padding-bottom: rem(260);
     }
 }
 
 .section-04::before {
     content: "";
-    background: url(../../assets/images/common/nami-gray.png);
+    background: url(../../assets/images/common/nami-gray.svg);
+    background-size: rem(700);
     position: absolute;
     display: block;
     width: 100%;
     height: rem(35);
-    top: rem(10);
+    top: 0;
     z-index: -1;
     @include mq(md){
-        top: 13%;
+        top: 10.3%;
+        background-size: 100%;
+    }
+    @include mq(xxl){
+        background-size: rem(1800);
     }
 }

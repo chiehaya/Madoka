@@ -3,16 +3,16 @@
 .footer {
     margin-top: rem(120);
     padding-top: rem(50);
-    padding-bottom: rem(50);
+    padding-bottom: rem(36);
     background-color: $accent-color;
     text-align: center;
     position: relative;
     @include mq(sm){
         margin-top: rem(150);
-        padding-top: rem(104);
+        padding-top: rem(60);
         padding-left: rem(80);
         padding-right: rem(80);
-        padding-bottom: rem(100);
+        padding-bottom: rem(50);
     }
     @include mq(md){
         margin-top: rem(200);
@@ -26,10 +26,10 @@
         content: "";
         display: block;
         height: 25.5rem;
-        left: -11%;
+        left: -16%;
+        top: -15%;
         position: absolute;
-        top: -12%;
-        width: 16.3125rem;
+        width: rem(192);
         z-index: -1;
         @include mq(md){
             width: 30.3125rem;
@@ -53,7 +53,7 @@
 }
 
 .footer__img {
-    max-width: rem(200);
+    max-width: rem(179);
     margin: 0 auto;
     @include mq(sm){
         max-width: rem(300);
@@ -67,11 +67,11 @@
     margin-top: rem(10);
     @include mq(md){
         display: flex;
-        margin-top: rem(50);
+        margin-top: rem(78);
         margin-left: rem(25);
         align-items: center;
         justify-content: center;
-        gap: rem(115);
+        gap: rem(24);
     }
 }
 
@@ -82,12 +82,68 @@
     }
 }
 
-.footer__text {
-    margin: rem(20) auto 0;
-    width: 80%;
+.footer__message {
+    margin: rem(18) auto 0;
+    width: 85%;
+    max-width: rem(300);
+    @include mq(sm){
+        width: 78%;
+        min-width: rem(380);
+        max-width: rem(388);
+    }
     @include mq(md){
         margin: 0;
-        width: rem(640);
+        width: rem(470);
+        max-width: 100%;
     }
 }
 
+.footer__name {
+    font-size: rem(20);
+    font-weight: $bold;
+    line-height: 2;
+    @include mq(sm){
+        font-size: rem(32);
+        line-height: 1.4;
+    }
+}
+
+.footer__text {
+    font-size: rem(15);
+    font-weight: $regular;
+    line-height: 1.7;
+    letter-spacing: 0.05em;
+    @include mq(sm){
+        font-size: rem(16);
+        line-height: 1.4;
+    }
+}
+
+.footer__text.footer__text--min {
+    font-size: rem(14);
+    @include mq(sm){
+        font-size: rem(16);
+    }
+}
+
+
+.footer__tel {
+    font-size: rem(18);
+    font-family: $fifth-font-family;
+    font-weight: $regular;
+    letter-spacing: 0.05em;
+    @include mq(sm){
+        font-size: rem(24);
+    }
+}
+
+.footer__fax {
+    font-size: rem(15);
+    font-family: $fifth-font-family;
+    font-weight: $regular;
+    letter-spacing: 0.05em;
+    @include mq(sm){
+        font-size: rem(16);
+        line-height:1.4;
+    }
+}

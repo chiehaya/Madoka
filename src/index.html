@@ -21,11 +21,14 @@
   <!-- google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&family=Sawarabi+Gothic&family=Shippori+Mincho&family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600&family=Sawarabi+Gothic&family=Shippori+Mincho&family=Zen+Maru+Gothic:wght@400;500&family=Spectral&display=swap" rel="stylesheet">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
   <!-- css -->
   <link rel="stylesheet" href="./assets/css/style.css">
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
 <body>
@@ -416,57 +419,55 @@
           <div class="open__title1">
             <img src="./assets/images/common/open-title.svg" alt="牡蠣の開け方">
           </div>
-          <div class="open__title2">
-            <img src="./assets/images/common/scroll-right.svg" alt="scroll">
-          </div>
+          <div class="swiper-button-next"></div>
         </div>
-        <div class="open__list">
-          <ul class="open__contents">
-            <li class="open__item">
-              <img src="./assets/images/common/step01.jpg" alt="牡蠣の画像">
-              <div class="open__description">
-                <div class="open__step">
-                  <img src="./assets/images/common/step01.svg" alt="ステップ1">
-                </div>
-                <div class="open__text">
-                  牡蠣の平らな面を上に向け、2時の場所にオイスターナイフを入れます。この付近に貝柱があります。
-                </div>
-              </div>
-            </li>
-            <li class="open__item">
-              <img src="./assets/images/common/step02.jpg" alt="牡蠣の画像">
-              <div class="open__description">
-                <div class="open__step">
-                  <img src="./assets/images/common/step02.svg" alt="ステップ2">
-                </div>
-                <div class="open__text">
-                  上の殻の貝柱を切って殻を開けます。膜が付いている場合は切り離します。
+        <div class="open__contents swiper js-kaki-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide open__item open__item--first">
+                <img src="./assets/images/common/step01.jpg" alt="牡蠣の画像">
+                <div class="open__description">
+                  <div class="open__step">
+                    <img src="./assets/images/common/step01.svg" alt="ステップ1">
+                  </div>
+                  <div class="open__text">
+                    牡蠣の平らな面を上に向け、2時の場所にオイスターナイフを入れます。この付近に貝柱があります。
+                  </div>
                 </div>
               </div>
-            </li>
-            <li class="open__item">
-              <img src="./assets/images/common/step03.jpg" alt="牡蠣の画像">
-              <div class="open__description">
-                <div class="open__step">
-                  <img src="./assets/images/common/step03.svg" alt="ステップ3">
-                </div>
-                <div class="open__text">
-                  下の殻の貝柱も切ります。
-                </div>
-              </div>
-            </li>
-            <li class="open__item open__item--last">
-              <img src="./assets/images/common/step04.jpg" alt="牡蠣の画像">
-              <div class="open__description">
-                <div class="open__step">
-                  <img src="./assets/images/common/step04.svg" alt="ステップ4">
-                </div>
-                <div class="open__text">
-                  身を裏返すと見栄えが良くなります。
+              <div class="swiper-slide open__item">
+                <img src="./assets/images/common/step02.jpg" alt="牡蠣の画像">
+                <div class="open__description">
+                  <div class="open__step">
+                    <img src="./assets/images/common/step02.svg" alt="ステップ2">
+                  </div>
+                  <div class="open__text">
+                    上の殻の貝柱を切って殻を開けます。膜が付いている場合は切り離します。
+                  </div>
                 </div>
               </div>
-            </li>
-          </ul>
+              <div class="swiper-slide open__item">
+                <img src="./assets/images/common/step03.jpg" alt="牡蠣の画像">
+                <div class="open__description">
+                  <div class="open__step">
+                    <img src="./assets/images/common/step03.svg" alt="ステップ3">
+                  </div>
+                  <div class="open__text">
+                    下の殻の貝柱も切ります。
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide open__item open__item--last">
+                <img src="./assets/images/common/step04.jpg" alt="牡蠣の画像">
+                <div class="open__description">
+                  <div class="open__step">
+                    <img src="./assets/images/common/step04.svg" alt="ステップ4">
+                  </div>
+                  <div class="open__text">
+                    身を裏返すと見栄えが良くなります。
+                  </div>
+                </div>
+              </div>
+          </div>
         </div>
       </div>
     </div>
@@ -519,7 +520,7 @@
     </div>
   </div>
 
-  <div class="shop">
+  <div class="shop js-fade-in">
     <div class="shop__link online-shop">
       <a href="https://www.maruko526.jp/products/list?category_id=13" target="_blank" rel="noopener no-referrer">
         <img src="./assets/images/common/shop_logo.png" alt="ONLINE SHOP">
@@ -543,13 +544,13 @@
       </div>
       <div class="footer__contents">
         <div class="footer__guidance guidance">
-          <p class="guidance__name">マルコ水産有限会社</p>
-          <p class="guidance__text">〒722-2631　広島県福山市内海町イ1428-128</p>
-          <p class="guidance__tel">Tel.084-986-2399</p>
-          <p class="guidance__text guidance__text--fax">　Fax.084-986-2399</p>
-          <p class="guidance__text">営業時間 … 9：00〜17：00</p>
+          <p class="footer__name">マルコ水産有限会社</p>
+          <p class="footer__text">〒722-2631 広島県福山市内海町イ1428-128</p>
+          <p class="footer__tel">Tel.084-986-2399</p>
+          <p class="footer__fax">Fax.084-986-2399</p>
+          <p class="footer__text footer__text--min">営業時間 … 9：00〜17：00</p>
         </div>
-        <div class="footer__text">
+        <div class="footer__message">
           <img src="./assets/images/common/footer-text.svg" alt="期限表記">
         </div>
       </div>

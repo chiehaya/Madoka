@@ -165,19 +165,21 @@ a {
 }
 
 .section-04 {
-	background: linear-gradient(180deg, transparent 0%, transparent 2%, #eceded 2%, #eceded 100%);
+	background: linear-gradient(180deg, transparent 0%, transparent 1%, #eceded 1%, #eceded 100%);
+	margin-top: 2.5rem;
 	padding-bottom: 4rem;
-	padding-top: 2rem;
+	padding-top: 3rem;
 	position: relative;
 }
 
 .section-04::before {
-	background: url(../../assets/images/common/nami-gray.png);
+	background: url(../../assets/images/common/nami-gray.svg);
+	background-size: 43.75rem;
 	content: "";
 	display: block;
 	height: 2.1875rem;
 	position: absolute;
-	top: 0.625rem;
+	top: 0;
 	width: 100%;
 	z-index: -1;
 }
@@ -216,8 +218,8 @@ a {
 .about__decoration-1,
 .about__decoration-2 {
 	opacity: 0;
-	transform: translate(0, 50px);
-	transition-duration: 500ms;
+	transform: translate(0, 10px);
+	transition-duration: 1000ms;
 	transition-property: opacity, transform;
 }
 
@@ -243,7 +245,7 @@ a {
 .footer {
 	background-color: #88C0CF;
 	margin-top: 7.5rem;
-	padding-bottom: 3.125rem;
+	padding-bottom: 2.25rem;
 	padding-top: 3.125rem;
 	position: relative;
 	text-align: center;
@@ -256,10 +258,10 @@ a {
 	content: "";
 	display: block;
 	height: 25.5rem;
-	left: -11%;
+	left: -16%;
 	position: absolute;
-	top: -12%;
-	width: 16.3125rem;
+	top: -15%;
+	width: 12rem;
 	z-index: -1;
 }
 
@@ -275,16 +277,48 @@ a {
 
 .footer__img {
 	margin: 0 auto;
-	max-width: 12.5rem;
+	max-width: 11.1875rem;
 }
 
 .footer__contents {
 	margin-top: 0.625rem;
 }
 
+.footer__message {
+	margin: 1.125rem auto 0;
+	max-width: 18.75rem;
+	width: 85%;
+}
+
+.footer__name {
+	font-size: 1.25rem;
+	font-weight: 700;
+	line-height: 2;
+}
+
 .footer__text {
-	margin: 1.25rem auto 0;
-	width: 80%;
+	font-size: 0.9375rem;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+	line-height: 1.7;
+}
+
+.footer__text.footer__text--min {
+	font-size: 0.875rem;
+}
+
+.footer__tel {
+	font-family: "Spectral", serif;
+	font-size: 1.125rem;
+	font-weight: 400;
+	letter-spacing: 0.05em;
+}
+
+.footer__fax {
+	font-family: "Spectral", serif;
+	font-size: 0.9375rem;
+	font-weight: 400;
+	letter-spacing: 0.05em;
 }
 
 .guidance__name {
@@ -344,7 +378,7 @@ a {
 	top: 0;
 	transform: translate(0, -50px);
 	transition: 2s;
-	transition-duration: 500ms;
+	transition-duration: 1000ms;
 	transition-property: opacity, transform;
 	z-index: 99999;
 }
@@ -357,6 +391,11 @@ a {
 .header.is-load {
 	opacity: 1;
 	transform: inherit;
+	transition: 1.5s;
+}
+
+.header.is-load.is-none {
+	transition: 0.3s;
 }
 
 .header__inner {
@@ -497,7 +536,7 @@ a {
 }
 
 .main-view.is-load {
-	animation-duration: 1.5s;
+	animation-duration: 2s;
 	animation-fill-mode: forwards;
 	animation-name: zoomInAnime;
 	opacity: 1;
@@ -512,7 +551,7 @@ a {
 	margin: 0 auto;
 	max-width: 28.9375rem;
 	opacity: 0;
-	transition: 2s;
+	transition: 2.2s;
 }
 
 .main-view__title.is-load {
@@ -540,7 +579,8 @@ a {
 }
 
 .main-view::before {
-	background: url(../../assets/images/common/nami.png);
+	background: url(../../assets/images/common/nami.svg);
+	background-size: 43.75rem;
 	bottom: 0;
 	content: "";
 	display: block;
@@ -566,8 +606,21 @@ a {
 	position: relative;
 }
 
+.map__img {
+	aspect-ratio: 375/243;
+	width: 100%;
+}
+
+.map__img img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
 .map::before {
-	background: url(../../assets/images/common/nami.png);
+	background: url(../../assets/images/common/nami.svg);
+	background-size: 43.75rem;
 	bottom: 0;
 	content: "";
 	display: block;
@@ -583,9 +636,9 @@ a {
 	cursor: pointer;
 	display: inline-block;
 	font-size: 0.875rem;
-	padding: 0.3125rem 0.875rem;
+	padding: 0.375rem 1.1875rem;
 	position: absolute;
-	right: 0.625rem;
+	right: 1.5rem;
 	transition: 0.3s;
 }
 
@@ -623,14 +676,18 @@ a {
 .open {
 	margin-top: 5rem;
 	opacity: 0;
-	transform: translate(0, 50px);
-	transition-duration: 500ms;
+	transform: translate(0, 10px);
+	transition-duration: 1000ms;
 	transition-property: opacity, transform;
 }
 
 .open.is-scroll-in {
 	opacity: 1;
 	transform: translate(0, 0);
+}
+
+.open__inner.inner {
+	padding: 0;
 }
 
 .open__container {
@@ -644,6 +701,7 @@ a {
 	flex-direction: column;
 	gap: 0.625rem;
 	margin: 0 auto;
+	position: relative;
 	width: 18.75rem;
 }
 
@@ -655,55 +713,58 @@ a {
 	width: 7.4375rem;
 }
 
-.open__list {
-	overflow: auto;
-	scrollbar-width: none;
-}
-
-.open__list::-webkit-scrollbar {
-	display: none;
-}
-
 .open__contents {
-	display: flex;
-	flex: none;
-	flex-wrap: nowrap;
-	gap: 5.75rem;
-	margin-left: 2.1875rem;
-	margin-top: 2.1875rem;
+	margin-top: 3.875rem;
 	position: relative;
-	width: 93.75rem;
 }
 
-.open__contents::before {
+.open__item {
+	padding-left: 1.875rem;
+	padding-right: 1.875rem;
+	position: relative;
+	width: 18.125rem;
+}
+
+.open__item--first {
+	padding-left: 2.1875rem;
+	width: 20.3125rem;
+}
+
+.open__item--first::before {
 	background-image: url(../../assets/images/common/start.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	content: "";
 	display: block;
 	height: 6.25rem;
-	left: -2%;
+	left: 0%;
 	position: absolute;
-	top: 7%;
-	width: 5.8125rem;
+	top: 10%;
+	width: 7.0625rem;
 	z-index: 10;
 }
 
-.open__item {
-	position: relative;
-	width: 16.5625rem;
+.open__img {
+	aspect-ratio: 290/207;
+}
+
+.open__img img {
+	-o-object-fit: cover;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
 }
 
 .open__item::after {
-	border-bottom: 15px solid transparent;
-	border-left: 15px solid black;
-	border-top: 15px solid transparent;
+	border-bottom: 10px solid transparent;
+	border-left: 13px solid black;
+	border-top: 10px solid transparent;
 	content: "";
 	display: block;
 	height: 0;
 	position: absolute;
-	right: -20%;
-	top: 26%;
+	right: -17%;
+	top: 30%;
 	width: 0;
 }
 
@@ -715,10 +776,10 @@ a {
 	content: "";
 	display: block;
 	height: 6.25rem;
-	left: -8%;
+	left: 0;
 	position: absolute;
-	top: 7%;
-	width: 6.25rem;
+	top: 10%;
+	width: 7.0625rem;
 }
 
 .open__step {
@@ -731,6 +792,27 @@ a {
 	font-size: 0.9375rem;
 	font-weight: 400;
 	margin-top: 0.6875rem;
+}
+
+.swiper-button-next::after {
+	background-image: url(../../assets/images/common/scroll-right.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	content: "";
+	height: 6.25rem;
+	margin: auto;
+	width: 7.4375rem;
+}
+
+.swiper-button-next {
+	left: 34%;
+	top: 4.75rem;
+	width: 7.4375rem;
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+	opacity: 1;
 }
 
 .pc-nav__items {
@@ -775,8 +857,8 @@ a {
 	margin-top: 6.25rem;
 	opacity: 0;
 	position: relative;
-	transform: translate(0, 50px);
-	transition-duration: 500ms;
+	transform: translate(0, 10px);
+	transition-duration: 1000ms;
 	transition-property: opacity, transform;
 }
 
@@ -927,8 +1009,8 @@ a {
 .recipe {
 	margin-top: 3.125rem;
 	opacity: 0;
-	transform: translate(0, 50px);
-	transition-duration: 500ms;
+	transform: translate(0, 10px);
+	transition-duration: 1000ms;
 	transition-property: opacity, transform;
 }
 
@@ -941,7 +1023,7 @@ a {
 	background-color: #DCD9BD;
 	outline: 1px solid rgb(64, 33, 15);
 	outline-offset: -8px;
-	padding: 2.5rem 1.875rem;
+	padding: 1.75rem 1.875rem;
 }
 
 .recipe__top {
@@ -955,17 +1037,17 @@ a {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
-	min-width: 17.5rem;
-	width: 39%;
+	min-width: 18.75rem;
+	width: 40%;
 }
 
 .recipe__title {
-	margin-top: 0.625rem;
-	width: 86%;
+	margin-top: 0.5625rem;
+	width: 76%;
 }
 
 .recipe__sub-title {
-	width: 55%;
+	width: 46%;
 }
 
 .recipe__decoration {
@@ -984,6 +1066,7 @@ a {
 }
 
 .recipe__text {
+	color: #40210f;
 	font-weight: 600;
 	margin-left: 1em;
 }
@@ -1004,8 +1087,8 @@ html {
 .section {
 	opacity: 0;
 	position: relative;
-	transform: translate(0, 50px);
-	transition-duration: 500ms;
+	transform: translate(0, 10px);
+	transition-duration: 1000ms;
 	transition-property: opacity, transform;
 }
 
@@ -1052,8 +1135,9 @@ html {
 	object-position: top;
 }
 
-.section__top::after {
-	background: url(../../assets/images/common/nami.png);
+.section__top::before {
+	background: url(../../assets/images/common/nami.svg);
+	background-size: 43.75rem;
 	bottom: 0;
 	content: "";
 	display: block;
@@ -1072,8 +1156,8 @@ html {
 
 .section__contents {
 	opacity: 0;
-	transform: translate(0, 50px);
-	transition-duration: 500ms;
+	transform: translate(0, 10px);
+	transition-duration: 1000ms;
 	transition-property: opacity, transform;
 }
 
@@ -1183,7 +1267,16 @@ html {
 
 .shop {
 	margin-top: 1.875rem;
+	opacity: 0;
 	text-align: center;
+	transform: translate(0, 10px);
+	transition-duration: 1000ms;
+	transition-property: opacity, transform;
+}
+
+.shop.is-scroll-in {
+	opacity: 1;
+	transform: translate(0, 0);
 }
 
 .shop__link {
@@ -1285,14 +1378,43 @@ html {
 
 .footer {
 	margin-top: 9.375rem;
-	padding-bottom: 6.25rem;
+	padding-bottom: 3.125rem;
 	padding-left: 5rem;
 	padding-right: 5rem;
-	padding-top: 6.5rem;
+	padding-top: 3.75rem;
 }
 
 .footer__img {
 	max-width: 18.75rem;
+}
+
+.footer__message {
+	max-width: 24.25rem;
+	min-width: 23.75rem;
+	width: 78%;
+}
+
+.footer__name {
+	font-size: 2rem;
+	line-height: 1.4;
+}
+
+.footer__text {
+	font-size: 1rem;
+	line-height: 1.4;
+}
+
+.footer__text.footer__text--min {
+	font-size: 1rem;
+}
+
+.footer__tel {
+	font-size: 1.5rem;
+}
+
+.footer__fax {
+	font-size: 1rem;
+	line-height: 1.4;
 }
 
 .inner {
@@ -1312,7 +1434,7 @@ html {
 	position: fixed;
 	top: 40%;
 	transform: translate(-50px, 0);
-	transition: 1s;
+	transition: 1.3s;
 	width: 1.5625rem;
 	z-index: 10;
 }
@@ -1326,13 +1448,25 @@ html {
 	right: 2.125rem;
 	top: 40%;
 	transform: translate(50px, 0);
-	transition: 1s;
+	transition: 1.3s;
 	width: 25px;
 	z-index: 10;
 }
 
+.map__img {
+	height: 24.25rem;
+}
+
+.open__inner.inner {
+	padding: 0 6.25rem;
+}
+
 .point {
 	margin-top: 13rem;
+}
+
+.recipe__title {
+	width: 86%;
 }
 
 .section__top {
@@ -1405,12 +1539,15 @@ html {
 }
 
 .section-04 {
-	background: linear-gradient(180deg, transparent 0%, transparent 14%, #eceded 14%, #eceded 100%);
+	background: linear-gradient(180deg, transparent 0%, transparent 12%, #eceded 12%, #eceded 100%);
+	margin-top: 0;
 	padding-bottom: 16.25rem;
+	padding-top: 2rem;
 }
 
 .section-04::before {
-	top: 13%;
+	background-size: 100%;
+	top: 10.3%;
 }
 
 .about {
@@ -1483,10 +1620,10 @@ html {
 .footer__contents {
 	align-items: center;
 	display: flex;
-	gap: 7.1875rem;
+	gap: 1.5rem;
 	justify-content: center;
 	margin-left: 1.5625rem;
-	margin-top: 3.125rem;
+	margin-top: 4.875rem;
 }
 
 .footer__guidance {
@@ -1494,14 +1631,15 @@ html {
 	width: 29.375rem;
 }
 
-.footer__text {
+.footer__message {
 	margin: 0;
-	width: 40rem;
+	max-width: 100%;
+	width: 29.375rem;
 }
 
 .guidance__name {
 	font-size: 2.125rem;
-	line-height: 2.1;
+	line-height: 1.8;
 }
 
 .guidance__tel {
@@ -1571,9 +1709,21 @@ html {
 	top: 32%;
 }
 
+.main-view::before {
+	background-size: 100%;
+}
+
 .main-view::after {
 	bottom: -6.9375rem;
 	width: 4.625rem;
+}
+
+.map__img {
+	height: 43.75rem;
+}
+
+.map::before {
+	background-size: 100%;
 }
 
 .map__link a {
@@ -1598,6 +1748,28 @@ html {
 	margin: 0;
 	margin: initial;
 	width: 30.5625rem;
+}
+
+.open__contents {
+	margin-right: 2.5rem;
+	margin-top: 2.1875rem;
+}
+
+.open__item {
+	padding: 0;
+}
+
+.open__item--first {
+	padding-left: 2.1875rem;
+}
+
+.open__item--last::after {
+	left: -8%;
+}
+
+.swiper-button-next {
+	left: 57%;
+	top: 92%;
 }
 
 .point__title {
@@ -1648,12 +1820,22 @@ html {
 }
 
 .recipe__top {
+	gap: 1%;
 	margin: 0.625rem auto;
+}
+
+.recipe__title {
+	width: 86%;
+}
+
+.recipe__sub-title {
+	width: 55%;
 }
 
 .recipe__decoration {
 	display: block;
 	margin-top: 0.9375rem;
+	width: 29.5%;
 }
 
 .recipe__contents {
@@ -1702,6 +1884,10 @@ html {
 
 .section__top {
 	height: 24.25rem;
+}
+
+.section__top::before {
+	background-size: 100%;
 }
 
 .section__title {
@@ -1806,6 +1992,26 @@ html {
 
 }
 
+@media screen and (min-width: 3000px) {
+
+.section-04::before {
+	background-size: 112.5rem;
+}
+
+.main-view::before {
+	background-size: 112.5rem;
+}
+
+.map::before {
+	background-size: 112.5rem;
+}
+
+.section__top::before {
+	background-size: 112.5rem;
+}
+
+}
+
 @media (max-width: 375px) {
 
 html {
@@ -1817,7 +2023,7 @@ html {
 @keyframes zoomInAnime {
 
 from {
-	transform: scale(1.2);
+	transform: scale(1.08);
 }
 
 to {

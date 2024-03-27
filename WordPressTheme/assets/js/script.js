@@ -50,7 +50,7 @@ jQuery(function ($) {
       var offset = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
-      if (scroll > offset - windowHeight + 150) {
+      if (scroll > offset - windowHeight + 300) {
         $(this).addClass("is-scroll-in");
       }
     });
@@ -99,6 +99,9 @@ $(function () {
   function header() {
     $('.js-header').addClass("is-load");
   }
+  function headerNone() {
+    $('.js-header').addClass("is-none");
+  }
   setTimeout(function () {
     fixed();
   }, 0);
@@ -107,38 +110,62 @@ $(function () {
   }, 100);
   setTimeout(function () {
     close01();
-  }, 2000);
+  }, 1800);
   setTimeout(function () {
     load02();
-  }, 2200);
+  }, 2000);
   setTimeout(function () {
     close02();
-  }, 4200);
+  }, 4000);
   setTimeout(function () {
     load03();
-  }, 4500);
+  }, 4300);
   setTimeout(function () {
     close03();
-  }, 6700);
+  }, 6300);
   setTimeout(function () {
     loader();
-  }, 8200);
+  }, 7600);
   setTimeout(function () {
     mainView();
-  }, 8700);
+  }, 8000);
   setTimeout(function () {
     mainTitle();
   }, 9500);
   setTimeout(function () {
     mainLeft();
-  }, 11000);
+  }, 10600);
   setTimeout(function () {
     mainRight();
-  }, 11000);
+  }, 10600);
   setTimeout(function () {
     header();
-  }, 11000);
+  }, 10500);
   setTimeout(function () {
     initial();
-  }, 7000);
+  }, 8000);
+  setTimeout(function () {
+    headerNone();
+  }, 12000);
+});
+
+// swiper
+var kaki_swiper = new Swiper(".js-kaki-swiper", {
+  spaceBetween: 90,
+  grabCursor: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true
+  },
+  mousewheel: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  slidesPerView: 1,
+  breakpoints: {
+    540: {
+      slidesPerView: 'auto'
+    }
+  }
 });

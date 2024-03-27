@@ -68,9 +68,9 @@
 
 .about__title,.about__decoration-1,.about__decoration-2 {
     opacity: 0;
-    transition-duration: 500ms;
+    transition-duration: 1000ms;
     transition-property: opacity, transform;
-    transform: translate(0, 50px);
+    transform: translate(0, 10px);
 }
 
 .about__decoration-2 {

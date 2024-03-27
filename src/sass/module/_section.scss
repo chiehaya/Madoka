@@ -3,9 +3,9 @@
 .section {
     position: relative;
     opacity: 0;
-    transition-duration: 500ms;
+    transition-duration: 1000ms;
     transition-property: opacity, transform;
-    transform: translate(0, 50px);
+    transform: translate(0, 10px);
 }
 
 .section.is-scroll-in {
@@ -67,15 +67,23 @@
     object-position: top;
 }
 
-.section__top::after {
+.section__top::before {
     content: "";
-    background: url(../../assets/images/common/nami.png);
+    background: url(../../assets/images/common/nami.svg);
+    background-size: rem(700);
     position: absolute;
     display: block;
     width: 100%;
     height: rem(35);
     bottom: 0;
-}   
+    @include mq(md){
+        background-size: 100%;
+    }
+    @include mq(xxl){
+        background-size: rem(1800);
+    }
+
+}
 
 .section__title {
     width: rem(250);
@@ -91,9 +99,9 @@
 
 .section__contents {
     opacity: 0;
-    transition-duration: 500ms;
+    transition-duration: 1000ms;
     transition-property: opacity, transform;
-    transform: translate(0, 50px);
+    transform: translate(0, 10px);
     @include mq(md){
         display: flex;
         gap: 7%;
