@@ -151,7 +151,7 @@ $(function () {
     }, 10600);
     setTimeout(function () {
         header();
-    }, 10500);
+    }, 10000);
     setTimeout(function () {
         initial();
     }, 8000);
