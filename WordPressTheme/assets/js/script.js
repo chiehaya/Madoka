@@ -134,10 +134,10 @@ $(function () {
   }, 9500);
   setTimeout(function () {
     mainLeft();
-  }, 10600);
+  }, 10800);
   setTimeout(function () {
     mainRight();
-  }, 10600);
+  }, 10800);
   setTimeout(function () {
     header();
   }, 10000);
