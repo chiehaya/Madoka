@@ -145,10 +145,10 @@ $(function () {
     }, 9500);
     setTimeout(function () {
         mainLeft();
-    }, 10800);
+    }, 10600);
     setTimeout(function () {
         mainRight();
-    }, 10800);
+    }, 10600);
     setTimeout(function () {
         header();
     }, 10000);
