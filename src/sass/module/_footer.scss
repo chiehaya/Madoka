@@ -16,6 +16,8 @@
     }
     @include mq(md){
         margin-top: rem(200);
+        padding-top: rem(100);
+        padding-bottom: rem(110);
     }
 }
 
@@ -25,16 +27,20 @@
         background-size: contain;
         content: "";
         display: block;
-        height: 25.5rem;
         left: -16%;
         top: -15%;
         position: absolute;
+        height: 25.5rem;
         width: rem(192);
         z-index: -1;
+        @include mq(sm){
+            left: -6%;
+            top: -12%;
+            width: rem(254);
+        }
         @include mq(md){
-            width: 30.3125rem;
+            width: rem(485);
             top: -24%;
-            width: 30.3125rem;
         }
 }
 
@@ -126,7 +132,6 @@
     }
 }
 
-
 .footer__tel {
     font-size: rem(18);
     font-family: $fifth-font-family;
@@ -139,9 +144,9 @@
 
 .footer__fax {
     font-size: rem(15);
+    letter-spacing: 0.05em;
     font-family: $fifth-font-family;
     font-weight: $regular;
-    letter-spacing: 0.05em;
     @include mq(sm){
         font-size: rem(16);
         line-height:1.4;

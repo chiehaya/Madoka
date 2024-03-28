@@ -50,6 +50,18 @@
     }
 }
 
+.about__title,.about__decoration-1,.about__decoration-2 {
+    opacity: 0;
+    transition-duration: 1000ms;
+    transition-property: opacity, transform;
+    transform: translate(0, 10px);
+}
+
+.about__title.is-scroll-in,.about__decoration-1.is-scroll-in,.about__decoration-2.is-scroll-in {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
 .about__decoration-1 {
     position: absolute;
     display: none;
@@ -63,14 +75,7 @@
     top: rem(-135);
     width: rem(620);
     left: max(50% - 44vw, 6rem);
-}
-}
-
-.about__title,.about__decoration-1,.about__decoration-2 {
-    opacity: 0;
-    transition-duration: 1000ms;
-    transition-property: opacity, transform;
-    transform: translate(0, 10px);
+    }
 }
 
 .about__decoration-2 {
@@ -88,7 +93,7 @@
     bottom: rem(-112);
     width: rem(448);
     right: max(50% - 43vw, -7.5rem);
-}
+    }
 }
 
 .about__contents {

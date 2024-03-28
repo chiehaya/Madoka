@@ -6,12 +6,12 @@
 
 .map__img {
     width: 100%;
-    aspect-ratio: 375 / 243 ;
+    height: rem(245);
     @include mq(sm){
-        height: rem(388);
+        height: rem(400);
     }
     @include mq(md){
-        height: rem(700);
+        height: rem(730);
     }
 }
 
@@ -40,8 +40,8 @@
 
 .map__link a {
     position: absolute;
-    right: rem(24);
-    bottom: rem(40);
+    right: rem(10);
+    bottom: rem(52);
     font-size: rem(14);
     background-color: $white;
     display: inline-block;
@@ -53,7 +53,7 @@
         font-size: rem(18); 
         padding: rem(18) rem(50);
         right: rem(70);
-        bottom: rem(80);
+        bottom: rem(90);
     }
 }
 

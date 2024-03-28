@@ -6,9 +6,6 @@
     transition-duration: 1000ms;
     transition-property: opacity, transform;
     transform: translate(0, 10px);
-    @include mq(sm){
-        // padding: 0 rem(100);
-    }
     @include mq(md){
         margin-top: rem(100);
     }
@@ -23,7 +20,7 @@
     background-color: #DCD9BD;
     outline: 1px solid rgb(64,33,15);
     outline-offset: -8px;
-    padding: rem(28) rem(30);
+    padding: rem(28) rem(25);
     @include mq(md){
         padding: rem(60) rem(67) rem(80);
     }
@@ -39,7 +36,6 @@
         gap: 1%;
     }
 }
-
 
 .recipe__titles {
     width: 40%;
@@ -76,37 +72,6 @@
     }
 }
 
-// .recipe__title::after {
-//     @include mq(md){
-//         content: "";
-//         background-image: url(../../assets/images/common/recipe-deco.svg);
-//         background-repeat: no-repeat;
-//         position: absolute;
-//         display: block;
-//         width: rem(313);
-//         height: rem(5);
-//         top: 50%;
-//         transform: translateY(-50%);
-//         right: 94%;
-//     }
-// }
-
-// .recipe__title::before {
-//     @include mq(md){
-//         content: "";
-//         background-image: url(../../assets/images/common/recipe-deco.svg);
-//         background-repeat: no-repeat;
-//         position: absolute;
-//         display: block;
-//         width: rem(313);
-//         height: rem(5);
-//         top: 50%;
-//         transform: translateY(-50%);
-//         left: 106%;
-//     }
-// }
-
-
 .recipe__contents {
     margin-top: rem(20);
     @include mq(md){
@@ -138,6 +103,7 @@
     color: #40210f;
     font-weight: $semibold;
     margin-left: 1em;
+    font-size: rem(14);
     @include mq(md){
         font-size: rem(18);
     }
@@ -147,10 +113,11 @@
     text-indent: -1em;
 }
 
-
 .recipe__warning {
-    margin-top: rem(20);
+    color: #40210f;
     font-weight: $regular;
+    margin-top: rem(20);
+    font-size: rem(13);
     @include mq(md){
         font-size: rem(16);
     }

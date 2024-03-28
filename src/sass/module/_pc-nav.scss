@@ -4,7 +4,6 @@
     height: inherit;
     display: flex;
     align-items: center;
-    // gap: rem();
 }
 
 .pc-nav__item {
@@ -13,15 +12,10 @@
 }
 
 .pc-nav__link {
-    // color: ;
     height: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.pc-nav__link {
-    height: inherit;
     transition: .3s;
 }
 
@@ -38,7 +32,3 @@
     align-items: center;
     justify-content: center;
 }
-
-
-
-
